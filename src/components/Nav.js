@@ -38,7 +38,7 @@ function Nav(){
                     </li>
                     <li class="nav-item">
                     <Link
-                        to='/contact'
+                        to='/Contanct'
                         className='nav-link'>
                     Contact Us
                     </Link>

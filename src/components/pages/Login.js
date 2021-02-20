@@ -8,9 +8,9 @@ function Login(){
                     <h2>Givy <i class='fab fa-typo3' /></h2>
                     <div class="container">
 			<div class="main">
-				<div class="main-center">
+				{/* <div class="main-center"> */}
+			<form class="" method="post" action="#">
 
-					<form class="" method="post" action="#">
             <div class="form-outline mb-4">
             <label class="form-label" for="form2Example1"></label>
                 <input type="email" id="form2Example1" class="form-control" placeholder="Email" />
@@ -58,7 +58,7 @@ function Login(){
         
         </div>
         </div>
-        </div>
+        {/* </div> */}
         </section>
         
         </>

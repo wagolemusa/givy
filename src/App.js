@@ -7,6 +7,8 @@ import Nav from './components/Nav';
 import Login from './components/pages/Login';
 import Siginup from './components/pages/Siginup';
 import Forgetpassword from './components/pages/Forgetpassword';
+import Contanct from './components/pages/Contanct';
+import Footer from './components/pages/Footer';
 
 function App(){
     return (
@@ -19,7 +21,9 @@ function App(){
                 <Route path='/Login' component={Login}/>
                 <Route path='/Siginup' component={Siginup} />
                 <Route path='/Forgetpassword' component={Forgetpassword} />
+                <Route path='/Contanct' component={Contanct} />
             </Switch> 
+            <Footer/>
         </Router>
     </>
     );
