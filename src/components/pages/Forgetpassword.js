@@ -9,7 +9,7 @@ function Forgetpassword(){
                     <h2>Givy <i class='fab fa-typo3' /></h2>
                     <div class="container">
 			<div class="main">
-				<div class="main-center">
+	
 
 					<form class="" method="post" action="#">
             <div class="form-outline mb-4">
@@ -21,7 +21,6 @@ function Forgetpassword(){
             </form>
             </div>
         
-        </div>
         </div>
         </div>
         </section>
