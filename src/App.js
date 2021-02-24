@@ -9,6 +9,7 @@ import Siginup from './components/pages/Siginup';
 import Forgetpassword from './components/pages/Forgetpassword';
 import Contanct from './components/pages/Contanct';
 import Footer from './components/pages/Footer';
+import Sidebar from './dashboard/Sidebar';
 
 function App(){
     return (
@@ -24,6 +25,9 @@ function App(){
                 <Route path='/Contanct' component={Contanct} />
             </Switch> 
             <Footer/>
+        </Router>
+        <Router>
+            <Sidebar/>
         </Router>
     </>
     );
