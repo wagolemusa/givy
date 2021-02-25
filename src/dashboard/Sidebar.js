@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from "react-icons/ai";
-import  {SidebarData} from './SidebarData';
+import  { SidebarData } from './SidebarData';
 import Submenu from './Submenu';
 import { IconContext } from 'react-icons/lib';
 
@@ -20,7 +20,6 @@ const NavIcon = styled(Link)`
     font-size: 2rem;
     height: 80px;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 `;
 
@@ -34,7 +33,7 @@ const SidebarNav = styled.nav`
     top: 0;
     left ${({ sidebar }) => (sidebar ? '0' : '-100%')};
     transition: 350ms;
-    z-index: 10
+    z-index: 10;
 `;
 
 const SidebarWrap = styled.nav`
