@@ -10,15 +10,16 @@ function HeroSection(){
         <>
         <section class="homepage">
             <div className='hero-container'>
-                <h1>The evolution of church and non-profit management software</h1>
+                <h1>The evolution of church and non-profit <br/>
+                management software</h1>
                 <p>What are you waiting for ?</p>
                 <div className='hero-btns'>
-                <button type="button" class="btn btn-primary">
+                < a href='/Siginup' button type="button" class="btn btn-primary">
                     GET STARTED
-                </button>
-                <button type="button" class="btn btn-danger">
+                </a>
+                <a href='/Siginup' button type="button" class="btn btn-danger">
                     Sign Up<i className='far fa-play-circle'/>
-                </button>
+                </a>
                 </div>
             </div>
         </section>

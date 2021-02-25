@@ -9,7 +9,7 @@ function Siginup(){
                     <h2>Givy <i class='fab fa-typo3' /></h2>
                     <div class="container">
 			<div class="main">
-				<div class="main-center">
+				{/* <div class="main-center"> */}
 
 					<form class="" method="post" action="#">
 						<div class="form-group">
@@ -32,14 +32,6 @@ function Siginup(){
 									<input type="text" class="form-control" name="email" placeholder="Email"/>
 							</div>
 						</div>
-
-						<div class="form-group">
-							<label for="username"></label>
-								<div class="input-group">
-									<input type="text" class="form-control" name="username" placeholder="Church Name"/>
-								</div>
-						</div>
-
 						<div class="form-group">
 							<label for="password"></label>
 								<div class="input-group">
@@ -56,12 +48,16 @@ function Siginup(){
 						</div>
 
                         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-						
+						<div class="text-center">
+							<br/>
+                	<p>Aready A member <a href='Login'>Login</a></p>
+        
+            </div>
 					</form>
 				</div>
 			</div>
 		</div>
-                </div>
+                {/* </div> */}
             </section>
 
         </>
