@@ -1,19 +1,36 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Homepage from './Homepage'
-import Dashboard from './dash/Dashboard'
-import Form from './dash/Form';
+import './App.css'
+import Home from './components/pages/home';
+import Nav from './components/Nav';
+import Login from './components/pages/Login';
+import Siginup from './components/pages/Siginup';
+import Forgetpassword from './components/pages/Forgetpassword';
+import Contanct from './components/pages/Contanct';
+import Footer from './components/pages/Footer';
+import Sidebar from './dashboard/Sidebar.js';
+
 
 function App(){
     return (
     <>
+      <Router>
+            {/* <Navbar/> */}
+            
+            <Nav/>
 
-    <Router>
-        <Route path='/' exact component={Homepage}/>
-        <Route path='/Dashboard' component={Dashboard}/>
-        <Route path='/Form' component={Form} />
-        
-    </Router>
+            <Switch>
+                <Route path='/' exact component={Home} />
+                <Route path='/Login' component={Login}/>
+                <Route path='/Siginup' component={Siginup} />
+                <Route path='/Forgetpassword' component={Forgetpassword} />
+                <Route path='/Contanct' component={Contanct} />
+                
+            </Switch> 
+            <Footer/>
+            <Sidebar/>
+        </Router>
+   
     </>
     );
 }
