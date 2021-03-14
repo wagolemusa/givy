@@ -7,8 +7,8 @@ function Payments() {
                 <div class="container-fluid">
                     <div className='row'>
                         <div className='col-md-9'>
-                        <button type="button" class="btn btn-primary my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
-                        Add Method 
+                        <button type="button" class="btn btn-outline-success my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
+                        <i class="far fa-plus-square"></i> &nbsp;&nbsp; Add Method 
                         </button>                    
             </div>
                 </div>

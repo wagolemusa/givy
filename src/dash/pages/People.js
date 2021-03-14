@@ -5,14 +5,13 @@
     function People(){
         return(
             <>
-            <br/>
-            <nav class="navbar navbar-light bg-light">
+            <div class="bg-whight">
                 <div class="container-fluid">
                     <div className='row'>
                         <div className='col-md-9'>
-                        <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal"> Add Person</button>
+                        <button class="btn btn-outline-success btn-lg" data-toggle="modal" data-target="#myModal"><i class="far fa-plus-square"></i> &nbsp;&nbsp;Add Person</button>
                     </div>
-                </div>
+                
                 <div className='col-md-3'>
                 <div class="input-group">
                     <div class="form-outline">
@@ -23,14 +22,15 @@
                     </button>
                     </div>
                 </div>
+                </div>
             </div>
-            </nav>
+            </div>
+            <br/>
                 <div className='container'>
-                  <hr/>
                   <div className='table_backgrund'>
                     <div className='row'>
                         
-                        <div className='col-md-9 bg-light'>
+                        <div className='col-md-9 bg-whight'>
                             
                             <div class="table-responsive">
                                 <table class="table">

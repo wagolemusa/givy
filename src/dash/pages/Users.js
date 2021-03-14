@@ -3,16 +3,15 @@ import React from 'react'
 function Users(){
     return(
         <>
-        <br/>
-        <nav class="navbar navbar-light bg-light">
+        <div class="bg-whight">
                 <div class="container-fluid">
                     <div className='row'>
                         <div className='col-md-9'>
-                        <button type="button" class="btn btn-primary my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
-                        Add User
+                        <button type="button" class="btn btn-outline-success my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
+                        <i class="far fa-plus-square"></i> &nbsp;&nbsp;Add User
                         </button>                    
-            </div>
                 </div>
+                
                 <div className='col-md-3'>
                 <div class="input-group">
                     <div class="form-outline">
@@ -23,8 +22,9 @@ function Users(){
                     </button>
                     </div>
                 </div>
+                </div>
             </div>
-            </nav>
+            </div>
         {/* Table */}
         <br/>
         <div className='container'>

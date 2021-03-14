@@ -4,14 +4,13 @@ import './pages.css'
 function Follow(){
     return(
         <>
-            <nav class="navbar navbar-light bg-light">
+            <div class="bg-whight">
                 <div class="container-fluid">
                     <div className='row'>
                         <div className='col-md-9'>
-                        <button type="button" class="btn btn-primary my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
-                            Add  Follow Up 
+                        <button type="button" class="btn btn-outline-success my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
+                        <i class="far fa-plus-square"></i> &nbsp;&nbsp;Add  Follow Up 
                         </button>                    
-            </div>
                 </div>
                 <div className='col-md-3'>
                 <div class="input-group">
@@ -24,10 +23,11 @@ function Follow(){
                     </div>
                 </div>
             </div>
-            </nav>
+            </div>
+            </div>
             <br/>
             <div className='container'>
-            <div class="table-responsive bg-light">
+            <div class="table-responsive bg-whight">
                 <table class="table">
                     <thead>
                         <tr>
