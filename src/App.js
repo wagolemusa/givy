@@ -1,34 +1,26 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
-import Home from './components/pages/home';
-import Nav from './components/Nav';
-import Login from './components/pages/Login';
-import Siginup from './components/pages/Siginup';
-import Forgetpassword from './components/pages/Forgetpassword';
-import Contanct from './components/pages/Contanct';
-import Footer from './components/pages/Footer';
-import Sidebar from './dashboard/Sidebar.js';
+import Homepage from './Homepage';
+import Dashboard from './dash/Dashboard';
+
+import Sidebar from './dash/Sidebar';
+// import Contribution from './dash/pages/Contribution';
+import Form from './dash/pages/Form';
+
 
 
 function App(){
     return (
     <>
       <Router>
-            {/* <Navbar/> */}
-            
-            <Nav/>
-
             <Switch>
-                <Route path='/' exact component={Home} />
-                <Route path='/Login' component={Login}/>
-                <Route path='/Siginup' component={Siginup} />
-                <Route path='/Forgetpassword' component={Forgetpassword} />
-                <Route path='/Contanct' component={Contanct} />
-                
+                <Route path='/' exact component={Homepage} />
+                <Route path='/dash' component={Dashboard}/>
+                <Route path='/dash/Form' exact component={Form} />
+                {/* <Route path='/dash/Contribution' exact component={Contribution}/> */}
             </Switch> 
-            <Footer/>
-            <Sidebar/>
+           
         </Router>
    
     </>

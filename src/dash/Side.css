@@ -17,6 +17,8 @@
     background: #a5aaad;
 }
 
+
+
 /*Login Signup Page*/
 a:focus,a:hover,a{
     outline:none;
@@ -29,6 +31,7 @@ li,ul{
 }
 .header-top i {
     font-size: 18px;
+    /* padding-left: 200px; */
 }
 .bg-image {
     /* background: url(../images/background-login.jpg) no-repeat 0 0 / cover; */
@@ -368,6 +371,7 @@ overflow-y: auto;
 }
 .search input {
     border: none;
+    padding-left: 230px;
     font-size: 15px;
     padding: 15px 9px;
     width: 100%;
@@ -426,6 +430,7 @@ header {
 .navbar-default {
     background-color: #ffffff;
     border-color: #ffffff;
+  
 }
 
 .navbar-toggle {
@@ -754,3 +759,7 @@ header {
     width: 100%;
 }
 }
+
+
+
+

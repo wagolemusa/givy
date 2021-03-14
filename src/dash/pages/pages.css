@@ -1,0 +1,240 @@
+.pages {
+    padding-left: 230px;
+    /* padding-top: -100px; */
+}
+
+.grew-color{
+    background-color: #e9eef5 !important;
+    border-radius: 5px;
+    padding: 20px;
+
+}
+.preview
+{
+    padding: 10px;
+    position: relative;
+}
+
+.preview i
+{
+    color: white;
+    font-size: 35px;
+    transform: translate(50px,130px);
+}
+
+.preview-img
+{
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7);
+}
+
+.browse-button
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute; /* Tweak the position property if the element seems to be unfit */
+    top: 10px;
+    left: 252px;
+    background: linear-gradient(180deg, transparent, black);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.browse-button:hover
+{
+    opacity: 1;
+}
+
+.browse-input
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    transform: translate(-1px,-26px);
+    opacity: 0;
+}
+
+.form-group1
+{
+    width:  350px;
+    margin: 10px auto;
+}
+
+.form-group input
+{
+    transition: 0.3s linear;
+}
+
+.form-group input:focus
+{
+    border: 1px solid crimson;
+    box-shadow: 0 0 0 0;
+}
+
+.Error
+{
+    color: crimson;
+    font-size: 13px;
+}
+
+.Back
+{
+    font-size: 25px;
+}
+
+.mat-button-wrapper {
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 27px;
+    font-family: WebComponentsIcons;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* .show-on-hover:hover > ul.dropdown-menu {
+    display: block;    
+} */
+
+.btn-group{
+    color: green;
+}
+
+.bg-whight{
+    background-color: #fff !important;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: -5px 7px 5px -8px var(--primary);
+}
+.card-header {
+    box-shadow: 0 1px 1px -1px rgba(0,0,0,.34),0 0 6px 0 rgba(0,0,0,.14);
+    padding: .72rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius: 5px;
+    border: .5px solid #ccc;
+    
+}
+.card-body li {
+    padding: 8px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.card-body i {
+    /* padding: 8px; */
+    color: green;
+}
+.card-body:hover{
+    font-style: underline;
+}
+
+.card-body a{
+    /* color: #76FF03; */
+}
+.dashbo{
+    text-align: center;
+}
+
+.dashbo p{
+    color: #616161!important;
+    font-size: 14px;
+}
+
+.dashbo i{
+    color: #616161!important;
+    font-size: 12px;
+}
+
+.ch-event-icon {
+    min-width: 10px;
+    background-color: rgb(245, 166, 35);
+}
+.dashbo h3{
+     color: var(--primary);
+     font-weight: 600;
+}
+
+.sytle1 h4{
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: bold;
+}
+.divInside{
+    /*background-color:rgba(234,11,140,0.5);*/
+    display:none;
+    color:black;
+    background-color:white;
+    font-size:large;
+    font-family:'Comic Sans MS';
+    
+}
+.border1{
+    border-radius: blue;
+    /* border-radius: 50px; */
+    overflow-y: auto;
+    height: 400px;
+}
+.contan{
+    padding-top: 40px;
+}
+    
+.contan h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+.check-in i{
+    color: chartreuse;
+    
+}
+.downmenu{
+    padding: 10px;  
+}
+.btn-primary1{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    height: 40px;
+}
+@media only screen and (max-device-width: 767px) {
+    .pages {
+        padding-left: 10px;
+    }
+    
+
+}
+@media only screen and (max-device-width: 768px) {
+    .pages {
+        padding-left: 80px;
+    }
+}
+@media only screen and (max-device-width: 360px) {
+    .pages {
+        padding-left: 17px;
+    }
+}
+
+@media only screen and (max-device-width: 375px, 414) {
+    .pages {
+        padding-left: 17px;
+    }
+}
+@media only screen and (max-device-width: 414px) {
+    .pages {
+        padding-left: 17px;
+    }
+}

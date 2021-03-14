@@ -17,7 +17,7 @@ function Side(){
                 <div class="navi">
                     <ul>
                         <li class="active"><a href="#"><i class="fas fa-chart-line"></i><span class="hidden-xs hidden-sm">Dashboard</span></a></li>
-                        <li><a href="/Form"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">People</span></a></li>
+                        <li><a href="/dash/Form"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">People</span></a></li>
                         <li><a href="#"><i class="fas fa-users"></i><span class="hidden-xs hidden-sm">Groups</span></a></li>
                         <li><a href="#"><i class="fas fa-calendar"></i><span class="hidden-xs hidden-sm">Events</span></a></li>
                         <li><a href="#"><i class="fas fa-hands-helping"></i><span class="hidden-xs hidden-sm">Follow up</span></a></li>
@@ -33,7 +33,7 @@ function Side(){
                                 <b class="caret"></b>
                             </a>
                             <ul id="submenu-3" class="panel-collapse collapse panel-switch" role="menu">
-                                <li><a href="#"><i class="fa fa-caret-right"></i>All Contribution</a></li>
+                                <li><a href="/dash/Contribution"><i class="fa fa-caret-right"></i>All Contribution</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right"></i>Batches</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right"></i>Funds</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right"></i>Payments Methods</a></li>
@@ -73,9 +73,9 @@ function Side(){
                                     </button>
                                 </div>
                             </nav>
-                            <div class="search hidden-xs hidden-sm">
+                            {/* <div class="search hidden-xs hidden-sm">
                                 <input type="text" placeholder="Search" id="search" />
-                            </div>
+                            </div> */}
                         </div>
                         <div class="col-md-5">
                             <div class="header-rightside">
@@ -113,13 +113,12 @@ function Side(){
                         </div>
                     </header>
                 </div>
-                
+            
 
-
-                <div class="container">
+                {/* <div class="container">
                     <h1>Hello, JS</h1>
        
-                </div>
+                </div> */}
             </div>
         </div>
 
