@@ -210,6 +210,25 @@
     border-color: #007bff;
     height: 40px;
 }
+th {
+    color: #676666;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+td{
+    color: #01579B;
+    font-size: 16px;
+}
+
+.modal-header{
+     background: #f5f2f0;
+     /* height: 60px; */
+}
+.modal-header span{
+    color:red;
+    font-size: 25px;
+}
 @media only screen and (max-device-width: 767px) {
     .pages {
         padding-left: 10px;
@@ -220,6 +239,10 @@
 @media only screen and (max-device-width: 768px) {
     .pages {
         padding-left: 80px;
+    }
+    .btn{
+        font-size: 15px;
+        width: 150px;
     }
 }
 @media only screen and (max-device-width: 360px) {

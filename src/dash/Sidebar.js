@@ -9,7 +9,7 @@ import { IconContext } from 'react-icons/lib';
 
 
 const Nav = styled.div`
-  background: #15171c;
+  background: #0e1a35;
   height: 80px;
   display: flex;
   justify-content: flex-start;
@@ -26,7 +26,7 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  background: #15171c;
+  background: #0e1a35;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -43,6 +43,7 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
+
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
 
@@ -54,10 +55,16 @@ const Sidebar = () => {
         <Nav>
           <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
-          </NavIcon>
+          </NavIcon>&nbsp;&nbsp;&nbsp;&nbsp;
+        <div className='sidenav pull-left'>
+          <h3>Admin</h3>
+        </div>
+            
         </Nav>
         <SidebarNav sidebar={sidebar}>
-          <SidebarWrap >
+          
+          <SidebarWrap onClick={sidebar}>
+          {/* <SidebarWrap> */}
             <NavIcon to='#'>
               <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon>

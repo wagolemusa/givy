@@ -4,14 +4,13 @@ import './pages.css'
 function Groups(){
     return(
         <>
-            <nav class="navbar navbar-light bg-light">
+            <div class="bg-whight">
                 <div class="container-fluid">
                     <div className='row'>
                         <div className='col-md-9'>
-                        <button type="button" class="btn btn-primary my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
-                            Add Groups
+                        <button type="button" class="btn btn-outline-success my-example-model" data-toggle="modal" data-target="#fullHeightModalRight">
+                        <i class="far fa-plus-square"></i> &nbsp;&nbsp; Add Groups
                         </button>                    
-            </div>
                 </div>
                 <div className='col-md-3'>
                 <div class="input-group">
@@ -23,12 +22,13 @@ function Groups(){
                     </button>
                     </div>
                 </div>
+                </div>
             </div>
-            </nav>
+            </div>
         {/* Table */}
         <br/>
         <div className='container'>
-            <div class="table-responsive bg-light">
+            <div class="table-responsive bg-whight">
                 <table class="table">
                     <thead>
                         <tr>
