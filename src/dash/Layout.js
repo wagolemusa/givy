@@ -52,7 +52,7 @@ function Layout(){
                     </ul>
                 </aside>            
             </div>
-            <main id="page-content-wrapper" role="main">
+            <main id="page-content-wrapper" role="main"
             </main>
         </div> 
     </> 
