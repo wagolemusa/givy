@@ -7,6 +7,7 @@ import HeroSection from '../HerosSction';
 function Home(){
     return (
         <>
+        
             <HeroSection/>
             
 

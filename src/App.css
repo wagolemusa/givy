@@ -335,6 +335,11 @@ padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 30px;
 }
+.sidenav {
+  color: #fff;
+  /* padding-left: 1100px; */
+
+}
 @media screen and (max-width: 768px){
 
   .contact h2{

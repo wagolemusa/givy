@@ -11,7 +11,7 @@ function Siginup(){
 			<div class="main">
 				{/* <div class="main-center"> */}
 
-					<form class="" method="post" action="#">
+					<form class="" method="post" action="/Sidebar">
 						<div class="form-group">
 							<label for="name"></label>
 								<div class="input-group">

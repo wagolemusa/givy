@@ -9,7 +9,7 @@ function Login(){
                     <div class="container">
 			<div class="main">
 				{/* <div class="main-center"> */}
-			<form class="" method="post" action="#">
+			<form class="" method="#" action="/app/Applink">
 
             <div class="form-outline mb-4">
             <label class="form-label" for="form2Example1"></label>

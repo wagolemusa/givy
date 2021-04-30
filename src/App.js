@@ -1,19 +1,29 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Homepage from './Homepage'
-import Dashboard from './dash/Dashboard'
-import Form from './dash/Form';
+import './App.css'
+import Homepage from './Homepage';
+import Dashboard from './dash/Dashboard';
+import Sidebar from './dash/Sidebar';
+// import Contribution from './dash/pages/Contribution';
+import Form from './dash/pages/Form';
+import Applink from './app/Applink'
+
+
 
 function App(){
     return (
     <>
-
-    <Router>
-        <Route path='/' exact component={Homepage}/>
-        <Route path='/Dashboard' component={Dashboard}/>
-        <Route path='/Form' component={Form} />
-        
-    </Router>
+      <Router>
+            <Switch>
+                <Route path='/' exact component={Homepage} />
+                <Route path='/app' component={Applink} />
+                {/* <Route path='/dash' component={Dashboard}/> */}
+                <Route path='/dash/Form' component={Form} />
+                {/* <Route path='/dash/Contribution' exact component={Contribution}/> */}
+            </Switch> 
+           
+        </Router>
+   
     </>
     );
 }
