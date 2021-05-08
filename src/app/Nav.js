@@ -3,6 +3,8 @@ import './Appstyle.css'
 import { Link } from 'react-router-dom';
 
 function Nav (){
+
+    
     return(
         <>
             <nav>
@@ -23,6 +25,9 @@ function Nav (){
                     </li>
                     <li>
                     <Link to="/app/Setting">Setting</Link>
+                    </li>
+                    <li>
+                    <Link to={'/'} onClick={() => localStorage.clear()}>Logout</Link>
                     </li>
                 </ul>
                

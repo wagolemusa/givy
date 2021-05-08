@@ -18,10 +18,10 @@ function Homepage(){
             <Nav/>
             <Switch>
                 <Route path='/' exact component={Home} />
-                <Route path='/Login' component={Login}/>
-                <Route path='/Siginup' component={Siginup} />
-                <Route path='/Forgetpassword' component={Forgetpassword} />
-                <Route path='/Contanct' component={Contanct} />
+                <Route exact path='/Login'  component={Login}/>
+                <Route exact path='/Siginup' component={Siginup} />
+                <Route exact path='/Forgetpassword'  component={Forgetpassword} />
+                <Route exact  path='/Contanct' component={Contanct} />
             </Switch> 
             <Footer/>
         </Router>
