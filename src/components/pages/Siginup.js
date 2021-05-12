@@ -1,52 +1,55 @@
 import React, { useState} from 'react'
 import '../../App.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
-// export default class Siginup extends React.Component{
-// 	constructor(props) {
-// 		super(props);
-	
 
-function Siginup () {
+class Siginup extends React.Component{
 
-	const [firstname, setFirstname] = useState("");
-	const [lastname,  setLastname] = useState("");
-	const [churchname, setChurchname]  = useState("");
-	const [phone, setPhone]  = useState("");
-	const [email, setEmail]  = useState("");
-    const [password, setPassword]  = useState("");
-
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-
-		const data = {
-			firstname,
-			lastname,
-			churchname,
-			phone,
-			email,	
-			password
+		constructor(props){
+			super(props)
+			this.state = {}
+			this.handleSubmit = this.handleSubmit.bind(this)
 		}
 
-		setFirstname('')
-		setLastname('')
-		setChurchname('')
-		setPhone('')
-		setEmail('')
-        setPassword('')
+		handleSubmit(event){
+			event.preventDefault()
+
+			const data = {
+				firstname: this.firstname,
+				lastname: this.lastname,
+				churchname: this.churchname,
+				phone: this.phone,
+				email: this.email,
+				password: this.password
+
+			}
 
 		axios.post('https://givyv2.herokuapp.com/users/api/register', data)
 		.then(res =>{
-		console.log(res)
+			this.setState({
+				loggedIn: true
+			});
 		})
 		.catch(err =>{
-		console.log(err)
+			this.setState({
+				message: err.response.data.message
+			})
 		})
 	}
 
-// function Siginup(){	render(){
+	render(){
+		if (this.state.loggedIn){
+			return <Redirect to={'/login'} />;
+		}
 
+		let error ='';
+		if (this.state.message){
+			error =(
+				<div className="alert alert-danger" role="alert">
+					{this.state.message}
+				</div>
+			)
+		}
 	
     return(
         <>
@@ -57,43 +60,44 @@ function Siginup () {
 			<div class="main">
 				{/* <div class="main-center"> */}
 
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={this.handleSubmit}>
+						{error}
 						<div class="form-group">
 							<label for="name"></label>
 								<div class="input-group">
-				                    <input type="text" class="form-control"  value={firstname} onChange={e => setFirstname(e.target.value)} id="name"  placeholder="First Name"/>
+				                    <input type="text" class="form-control"  onChange={event => this.firstname = event.target.value} id="name"  placeholder="First Name" required/>
 							    </div>
 						</div>
 
 						<div class="form-group">
 							<label for="name"></label>
 								<div class="input-group">
-				                    <input type="text" class="form-control" value={lastname} onChange={e => setLastname(e.target.value)} id="name"  placeholder="Last Name"/>
+				                    <input type="text" class="form-control" onChange={event => this.lastname = event.target.value} id="name"  placeholder="Last Name" required/>
 							    </div>
 						</div>
 						<div class="form-group">
 							<label for="name"></label>
 								<div class="input-group">
-				                    <input type="text" class="form-control" value={churchname} onChange={e => setChurchname(e.target.value)} id="name"  placeholder="Church Name"/>
+				                    <input type="text" class="form-control" onChange={event => this.churchname = event.target.value} id="name"  placeholder="Church Name" required/>
 							    </div>
 						</div>
 						<div class="form-group">
 							<label for="name"></label>
 								<div class="input-group">
-				                    <input type="number" class="form-control"value={phone} onChange={e => setPhone(e.target.value)} id="name"  placeholder="Phone Number"/>
+				                    <input type="number" class="form-control" onChange={event => this.phone = event.target.value} id="name"  placeholder="Phone Number" required/>
 							    </div>
 						</div>
 						<div class="form-group">
 							<label for="email"></label>
 								<div class="input-group">
-									<input type="text" class="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email"/>
+									<input type="email" class="form-control" onChange={event => this.email = event.target.value} placeholder="Email" required/>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="password"></label>
 								<div class="input-group">
 									
-									<input type="password" class="form-control" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password"/>
+									<input type="password" class="form-control" onChange={event => this.password = event.target.value} placeholder="Password" required/>
 								</div>
 						</div>
 
@@ -120,5 +124,5 @@ function Siginup () {
         </>
 	)
 	}
-// }
+}
 export default Siginup

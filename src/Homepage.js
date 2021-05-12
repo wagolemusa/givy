@@ -9,6 +9,7 @@ import Siginup from './components/pages/Siginup';
 import Forgetpassword from './components/pages/Forgetpassword';
 import Contanct from './components/pages/Contanct';
 import Footer from './components/pages/Footer';
+import Success from './components/pages/Success'
 
 function Homepage(){
     return (
@@ -17,11 +18,12 @@ function Homepage(){
             {/* <Navbar/> */}
             <Nav/>
             <Switch>
-                <Route path='/' exact component={Home} />
-                <Route exact path='/Login'  component={Login}/>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/Login' component={Login}/>
                 <Route exact path='/Siginup' component={Siginup} />
-                <Route exact path='/Forgetpassword'  component={Forgetpassword} />
-                <Route exact  path='/Contanct' component={Contanct} />
+                <Route exact path='/Forgetpassword' component={Forgetpassword} />
+                <Route exact path='/Contanct' component={Contanct} />
+                <Route exact path='/Success' component={Success} />
             </Switch> 
             <Footer/>
         </Router>
