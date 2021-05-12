@@ -17,6 +17,7 @@ export default class Giver extends Component{
                 this.setState({
                     user: res.data
                 });
+
                 console.log(res)
             },
             err =>{
@@ -33,9 +34,9 @@ export default class Giver extends Component{
         // }
 
         return(
-            <>
+            <div className="pages">
                 <h1>Refuge wise</h1>
-            </>
+            </div>
         )
     }
 }

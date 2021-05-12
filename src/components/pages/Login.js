@@ -3,48 +3,51 @@ import {  Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function Login () {
+class Login extends React.Component{
 
-    const state = { };
-     
+    constructor(props) {
+        super(props)
+        this.state = {}
+
+        this.handleSubmit = this.handleSubmit.bind(this)
+      }
     
-    const [churchname, setChurchname] = useState("");
-    const [password, setPassword] = useState("");
-    const [ message, setMessage] = useState("");
+      handleSubmit(event) {
+        event.preventDefault()
 
-    const changeOnClick = (e) => {
-        e.preventDefault()
-
-        const data = {
-            churchname,
-            password
+        const data ={
+            churchname: this.churchname,
+            password: this.password
         }
-       
-        setChurchname('')
-        setPassword('')
 
         axios.post('https://givyv2.herokuapp.com/users/api/authenticate', data)
             .then(res =>{
                 localStorage.setItem('token', res.data.token)
 
-                if (res.data.success == true){
-                    
-                    window.location.replace("app/Giver")
-                }
+                this.setState({
+                    success: true
+                });
+                this.props.useUser(res.data.user)
             })
-            .catch(message =>{
-                // if (err == 401){
-                //    let  error = err.response.data.message
-                   document.getElementById("reg").innerText = message["message"];
-                // }
+            .catch(err =>{
+                this.setState({
+                    message: err.response.data.message
+                })
+              
             })
     };
 
+    render(){
+
+    if (this.state.success){
+        window.location.replace("app/Giver")
+    }
+
     let error ='';
-    if (message){
+    if (this.state.message){
         error =(
             <div className="alert alert-danger" role="alert">
-                {message}
+                {this.state.message}
             </div>
         )
     }
@@ -56,7 +59,7 @@ function Login () {
                         <div class="container">
                 <div class="main">
                     {/* <div class="main-center"> */}
-                <form onSubmit={changeOnClick} encType ='multipart/form-data'>
+                <form onSubmit={this.handleSubmit} encType ='multipart/form-data'>
 
                     {error}
 
@@ -64,16 +67,16 @@ function Login () {
                     
                 <div class="form-outline mb-4">
                 <label class="form-label" for="form2Example1"></label>
-                    <input type="text" value={churchname} onChange={e => setChurchname(e.target.value)} id="form2Example1" class="form-control" placeholder="Church Name" 
-                    
+                    <input type="text"  onChange={event => this.churchname = event.target.value} id="form2Example1" class="form-control" placeholder="Church Name" 
+                    required
                 />
                 </div>
 
 
                 <div class="form-outline mb-4">
                 <label class="form-label" for="form2Example2"></label>
-                    <input type="password" value={password} onChange={e => setPassword(e.target.value)} id="form2Example2" class="form-control" placeholder="Password" 
-                       
+                    <input type="password"  onChange={event => this.password = event.target.value} id="form2Example2" class="form-control" placeholder="Password" 
+                      required 
                     />  
                 </div>
                 <div class="row mb-4">
@@ -113,7 +116,7 @@ function Login () {
             </section>
             
             </>
-        
-        )}
     
+        )}
+}
 export default Login
