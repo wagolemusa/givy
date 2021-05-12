@@ -25,9 +25,10 @@ class Login extends React.Component{
                 localStorage.setItem('token', res.data.token)
 
                 this.setState({
-                    success: true
+                    loggedIn: true
                 });
-                this.props.useUser(res.data.user)
+                
+                // this.props.useUser(res.data.user)
             })
             .catch(err =>{
                 this.setState({
@@ -38,9 +39,9 @@ class Login extends React.Component{
     };
 
     render(){
-
-    if (this.state.success){
-        window.location.replace("app/Giver")
+      
+    if (this.state.loggedIn){
+        window.location.replace("/app/Giver")
     }
 
     let error ='';

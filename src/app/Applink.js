@@ -14,9 +14,9 @@ function Applink (){
             <Nav/>
                 <Switch>
                     <Route exact path='/app/Giver' component={Giver}/>
-                    <Route exact path='/app/Recuring' component={Recuring} />
-                    <Route exact path='/app/Givingflow' component={Givingflow}/>
-                    <Route exact path='/app/Setting' component={Setting}/>
+                    <Route  path='/app/Recuring' component={Recuring} />
+                    <Route  path='/app/Givingflow' component={Givingflow}/>
+                    <Route  path='/app/Setting' component={Setting}/>
                 </Switch>
             </Router>
 
