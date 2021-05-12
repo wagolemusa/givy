@@ -18,7 +18,7 @@ function Homepage(){
             {/* <Navbar/> */}
             <Nav/>
             <Switch>
-                <Route exact path='/' component={Home} />
+                <Route  path='/'exact component={Home} />
                 <Route exact path='/Login' component={Login}/>
                 <Route exact path='/Siginup' component={Siginup} />
                 <Route exact path='/Forgetpassword' component={Forgetpassword} />
