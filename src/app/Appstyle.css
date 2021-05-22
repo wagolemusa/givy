@@ -97,6 +97,257 @@ nav ul li a:hover{
 } */
 
 
+
+/* style design  */
+
+.sytle_giver {
+  background-color: #ffffff;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  padding: 2em;
+}
+.uploadimage{
+  -moz-box-align: center;
+align-items: center;
+background-color: rgb(207, 253, 199);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 0.8rem;
+color: rgb(45, 188, 224);
+display: flex;
+height: 13rem;
+max-width: 55.5rem;
+position: relative;
+width: 100%;
+padding: 2rem 3rem 5rem 1.5rem;
+}
+
+.browse-button1{
+border-radius: 50%;
+height: 4rem;
+/* justify-content: center; */
+/* margin: 0px; */
+outline: currentcolor none medium;
+padding: 0px;
+position: relative;
+width: 5rem;
+background-color: rgb(45, 188, 224);
+border: 0.4rem solid white;
+display: flex;
+color: rgb(255, 255, 255);
+
+}
+
+.browse-button1 i {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.kryKBZ {
+  font-size: 1rem;
+  font-weight: 300;
+  /* letter-spacing: -0.0138889em; */
+  /* line-height: 1.22222em; */
+  color: #161a42;
+  padding-left: 40px;
+}
+
+.browse-input1{
+  
+border-radius: 50%;
+margin: 0px;
+background-color: #161a42;
+border: 0.4rem solid white;
+display: flex;
+padding-right: 70px;
+height: 90px;
+width: 70px;
+cursor: pointer;
+}
+
+
+element {
+
+}
+.dbSzIv {
+
+    padding-left: 2.5rem;
+
+}
+.dbSzIv {
+
+    border-radius: 0.8rem;
+    height: 6.5rem;
+    padding-left: 2rem;
+    /* padding-right: 9rem; */
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    background: rgb(240, 252, 255) none repeat scroll 0% 0%;
+    border: 0.2rem solid transparent;
+    box-sizing: border-box;
+    max-width: 100%;
+
+}
+.fsEGGn {
+  border: 0px none;
+  display: inline-block;
+  margin: 0px;
+  outline: currentcolor none 0px;
+  vertical-align: middle;
+  white-space: normal;
+  line-height: normal !important;
+  height: 70px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.0208333em;
+  color: rgb(0, 188, 235);
+  font-family: Lato;
+}
+.iYhAcm {
+  caret-color: inherit;
+  display: inline-block;
+  margin: 0px;
+  outline: currentcolor none 0px;
+  vertical-align: middle;
+  white-space: normal;
+  max-width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.3em;
+  background: rgb(240, 252, 255) none repeat scroll 0% 0%;
+  border-radius: 0.8rem;
+  border: 0.2rem solid transparent;
+  box-sizing: border-box;
+  color: rgb(0, 188, 235);
+  font-family: Lato;
+  padding: 2.5rem 2rem 6rem;
+      padding-right: 2rem;
+      padding-left: 2rem;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+}
+
+.jtmHyL {
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.166667em;
+  line-height: 1.5em;
+  display: inline-block;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  padding-left: 0.8rem;
+  text-transform: uppercase;
+  color: rgba(0, 81, 102, 0.5);
+  -moz-user-select: none;
+
+}
+.gRWngx {
+
+  border-radius: 0.8rem;
+  border: 0.2rem solid #64DD17;
+  height: auto;
+  outline: currentcolor none medium;
+  margin-bottom: 5rem;
+  padding: 2.5rem 1.4rem 4rem;
+  position: relative;
+  width: 100%;
+
+}
+.fqIstn {
+
+  display: inline-flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  margin: 1rem;
+  outline: currentcolor none medium;
+  overflow: hidden;
+  -moz-user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 4rem;
+  color: rgb(255, 255, 255);
+  padding: 0px 5.5rem;
+  background: rgb(45, 188, 224) none repeat scroll 0% 0%;
+  align-items: center;
+  -moz-box-align: center;
+  border-radius: 99rem;
+  border: medium none;
+  min-width: 25rem;
+  position: relative;
+  width: auto;
+  transition: all 100ms ease-in-out 0s;
+
+}
+
+.viewsite h3{
+  padding-left: 20px;
+  color: #161a42;
+  font-size: 25px;
+}
+.viewsite p{
+  background-clip: padding-box;
+  background-color: rgb(240, 252, 255);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  width: 500px;
+  color: rgb(0, 188, 235);
+  margin: 0px;
+  font-size: 30px;
+}
+.gRWngx h1{
+  padding-left: 0.8rem;
+  text-transform: uppercase;
+  color: rgba(0, 81, 102, 0.5);
+  -moz-user-select: none;
+}
+.gRWngx h3{
+  padding-left: 0.8rem;
+  text-transform: uppercase;
+  color: rgba(0, 81, 102, 0.5);
+  -moz-user-select: none;
+  font-size: 18px;
+}
+.tabas a{
+  font-size: 25px;
+  color:#0D47A1;
+  font-weight: 700;
+
+}
+.bjALwV {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: -0.0227273em;
+  line-height: 1em;
+  display: block;
+  background-color: rgb(240, 252, 255);
+  border-radius: 0.8rem;
+  color: rgb(0, 188, 235);
+  font-family: Lato;
+  padding: 2.1rem 2.11rem;
+  width: 100%;
+  white-space: pre;
+  overflow: scroll;
+  padding-top: 40px;
+}
+.RWng h2{
+  padding: 1.1rem 1.11rem;
+  /* padding-right: 0.8rem; */
+  text-transform: uppercase;
+  color: rgba(0, 81, 102, 0.5);
+  -moz-user-select: none;
+  font-size: 18px;
+}
+/* end style design */
+
 nav ul {
 	padding: 0;
 	margin: 0;
@@ -1518,6 +1769,92 @@ background: none;
 }
 }
 
+
+
+/* Accodion */
+
+
+
+#accordion-style-1 h1,
+#accordion-style-1 a{
+    color:#007b5e;
+}
+#accordion-style-1 .btn-link {
+    font-weight: 400;
+    color: #007b5e;
+    background-color: transparent;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: bold;
+	padding-left: 25px;
+}
+
+#accordion-style-1 .card-body {
+    border-top: 2px solid #007b5e;
+}
+
+#accordion-style-1 .card-header .btn.collapsed .fa.main{
+	display:none;
+}
+
+#accordion-style-1 .card-header .btn .fa.main{
+	background: #007b5e;
+    padding: 13px 11px;
+    color: #ffffff;
+    width: 35px;
+    height: 41px;
+    position: absolute;
+    left: -1px;
+    top: 10px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+	display:block;
+}
+
+.submit button{
+  padding-right: 20px;
+}
+
+.logery{
+  width: 500px;
+  margin: 3vh auto;
+  box-shadow: 0 7px 7px rgb(0 0 0 / 12%), 0 12px 40px rgb(0 0 0 / 24%);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+.multform{
+  background-color: #1f2f38;
+  padding: 1em;
+  color: #ffffff;
+ 
+  font-weight: 600;
+
+}
+.multform h3{
+  font-size: 18px;
+}
+
+.logery label{
+  font-size: 16px;
+  color:  #424242;
+}
+
+.logery button {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+}
+
+.activ h2{
+  font-size: 25px;
+  font-weight: 600;
+  padding-left: 300px;
+  color: #00B74A;
+}
 @media only screen and (max-device-width: 767px) {
   .pages {
       padding-left: 10px;

@@ -5,6 +5,7 @@ import Giver from './pagesApp/Giver'
 import Recuring from './pagesApp/Recuring'
 import Givingflow from './pagesApp/Givingflow'
 import Setting from './pagesApp/Setting'
+import Actave from './pagesApp/Actave'
 import { Link } from 'react-router-dom';
 
 function Applink (){
@@ -14,9 +15,10 @@ function Applink (){
             <Nav/>
                 <Switch>
                     <Route exact path='/app/Giver' component={Giver}/>
-                    <Route  path='/app/Recuring' component={Recuring} />
-                    <Route  path='/app/Givingflow' component={Givingflow}/>
-                    <Route  path='/app/Setting' component={Setting}/>
+                    <Route path ='/app/Actave' component={Actave} />
+                    <Route path='/app/Recuring' component={Recuring} />
+                    <Route path='/app/Givingflow' component={Givingflow}/>
+                    <Route path='/app/Setting' component={Setting}/>
                 </Switch>
             </Router>
 

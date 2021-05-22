@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Nav (){
     return(
       <div>
-    <nav class="navbar navbar-expand navbar-dark"> <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
+    <nav class="navbar fixed-top navbar-expand navbar-dark"> <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
         <span class="navbar-toggler-icon"></span></a> 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> 
         <span class="navbar-toggler-icon"></span> </button>
@@ -32,17 +32,10 @@ function Nav (){
         <div id="wrapper" class="toggled">
             
             <div id="sidebar-wrapper">
-                {/* <ul class="sidebar-nav">
-                    <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
-                    <li> <a href="#">Dashboard</a> </li>
-                    <li> <a href="#">Shortcuts</a> </li>
-                    <li> <a href="#">Overview</a> </li>
-                    <li> <a href="#">Events</a> </li>
-                    <li> <a href="#">About</a> </li>
-                    <li> <a href="#">Services</a> </li>
-                    <li> <a href="#">Contact</a> </li>
-                </ul> */}
                 <ul class="sidebar-nav">
+                    <li>
+                        <Link to='/app/Actave'><i class="fas fa-money-check-alt">&nbsp;&nbsp;</i>Activate</Link>
+                    </li>
                     <li>
                     <Link to='/app/Giver'><i class="fas fa-hand-holding-usd">&nbsp;&nbsp;</i>Giver</Link>
                     </li>
