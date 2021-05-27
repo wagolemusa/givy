@@ -12,7 +12,7 @@ function Trigger (){
                             <select class="select dbSzIv fsEGGn">
                             <option value="1">Choose One</option>
                                 <option value="1">www.kisumuchurh.com</option>
-                            </select>
+                        </select>
                     
                     <div className="row">
                         <div className="col">

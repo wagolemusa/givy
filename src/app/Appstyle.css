@@ -346,6 +346,11 @@ element {
   -moz-user-select: none;
   font-size: 18px;
 }
+
+.gRWngx p{
+  color: rgb(0, 81, 102);
+  font-family: Lato;
+}
 /* end style design */
 
 nav ul {
