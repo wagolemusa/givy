@@ -30,8 +30,7 @@ class Givingflow extends React.Component {
 
       }
 
-      axios.post('https://boltgw-uat.cardconnect.com/cardconnect/rest/auth',{
-      body: JSON.stringify(user),
+      axios.post('https://boltgw-uat.cardconnect.com/cardconnect/rest/auth', user,{
         header: {
           "Content-Type": "application/json",
           "Access-Control-Request-Method": "POST",
