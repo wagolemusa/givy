@@ -6,31 +6,7 @@ import Design from './tabs/Design';
 import Message from './tabs/Message';
 import Trigger from './tabs/Trigger';
 
-let token = localStorage.getItem('token')
-
-export default class Recuring extends Component{
-    componentDidMount(){
-        axios.get('https://givyv2.herokuapp.com/users/api/authenticate',{
-            headers : {
-                'Content-Type' : 'application/json',
-                'Accept' : 'application/json',
-                'Authorization' : token
-              }
-        })
-        .then(
-            res =>{
-                this.setState({
-                    user: res.data
-                });
-
-                console.log(res)
-            },
-            err =>{
-                console.log(err)
-            }
-        )
-    }
-
+class Recuring extends Component{
     render(){
         // if (this.state.user){
         //     return (
@@ -68,7 +44,6 @@ export default class Recuring extends Component{
                     </div>
                     <div id="menu2" class="container tab-pane fade">
                         <Installation/>
-
                     </div>
 
                     <div id="menu3" class="container tab-pane fade">
@@ -82,4 +57,4 @@ export default class Recuring extends Component{
         )
     }
 }
-// export default Recuring
+export default Recuring
