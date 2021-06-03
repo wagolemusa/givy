@@ -196,6 +196,21 @@ width: 100%;
 padding: 2rem 3rem 5rem 1.5rem;
 }
 
+/* #input[type="file"]{
+  display: none;
+} */
+.img-holder{
+  width: 500px;
+  height: 210px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.img{
+  width: 490px;
+  height: 200px;
+}
 .browse-button1{
 border-radius: 50%;
 height: 4rem;
