@@ -1,9 +1,38 @@
 import React from 'react'
+import axios from 'axios'
 
-function Trigger (){
+let token = localStorage.getItem('token')
+
+
+class Trigger extends React.Component{
+
+    constructor(props){
+        super(props)
+        // this.handleSubmit = this.handleSubmit.bind(this)
+    }
+    state ={
+        posts: []
+    }
+    componentDidMount =() =>{
+        this.getAllPost();
+    }
+    getAllPost = async () =>{
+        const { data} = await axios.get("https://givyv2.herokuapp.com/web/api/get/url",{
+            headers: {
+                'Authorization': token,
+                'Accept' : 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+        this.setState({posts: data.query})
+    
+    }
+
+    render(){
+        
     return (
         <>
-                    <div className="gRWngx">
+                <div className="gRWngx">
                         <h1>Create GivingFlow triggers</h1>
                         <p>It’s simple to make a trigger you can use anywhere (on your site, in an email, in your church app) that will open the GivingFlow on your website so you can lead people directly to give from wherever they are.
                          Simply select a URL, add customizations if you like, then copy the link to use</p>
@@ -17,7 +46,7 @@ function Trigger (){
                     <div className="row">
                         <div className="col">
                             <h3>Suggest an amount</h3>
-                            <input type="text" id="form4Example2" class="form-control dbSzIv fsEGGn" /> 
+                            <input type="number" id="form4Example2" class="form-control dbSzIv fsEGGn" placeholder="$" /> 
                         </div>
                         <div className="col">
                         <h3>Suggest Fund</h3>
@@ -32,14 +61,12 @@ function Trigger (){
                         <div className="col">
                             <h3>Suggest frequency</h3>
                             <select class="select dbSzIv fsEGGn">
-                                <option value="1">Choose One</option>
-                                <option value="1">Just this once</option>
-                                <option value="2">Every Week</option>
-                                <option value="3">Every two weeks</option>
-                                <option value="8">Every Month</option>
-                                <option value="8">Every 1st and 15th</option>
-                                <option value="8">Every 15th and 20th</option>
-                            </select>
+                                    Select Website URL
+                                {this.state.posts.map((post, index)=>(
+                                    <option>Select Website Url</option>,
+                                <option key = {index}>{post. weburl.web_url}</option>
+                                ))}
+                                </select>
                         </div>
                         <div className="col">
                         <h3>Suggest start</h3>
@@ -66,6 +93,7 @@ function Trigger (){
                 </div>
         </>
     )
+    }
 }
 
 export default Trigger

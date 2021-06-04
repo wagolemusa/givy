@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Install from './Install';
 
 let token  = localStorage.getItem("token")
 class Installation extends React.Component{
     
         constructor(props){
             super(props)
-            this.state = {}
+           
             this.handleSubmit = this.handleSubmit.bind(this)
+            
         }
-    
+
+        state ={
+            posts: []
+           
+        }
+
+        
         handleSubmit(event){
             event.preventDefault()
     
@@ -31,6 +39,22 @@ class Installation extends React.Component{
                 console.log(err)
               })
         }
+
+
+        componentDidMount =() =>{
+            this.getAllPost();
+        }
+        getAllPost = async () =>{
+            const { data} = await axios.get("https://givyv2.herokuapp.com/web/api/get/url",{
+                headers: {
+                    'Authorization': token,
+                    'Accept' : 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            this.setState({posts: data.query})
+        
+        }
     
     render(){
 
@@ -50,44 +74,36 @@ class Installation extends React.Component{
                         Add Your Website url
                         </button>                            
                      </div>
-                            
-                    <div className="viewsite"><br/>
-                        <h3>WEBSITE URLS</h3>
-                            <p>www.kisumuchurh.com</p>
+                        
                     </div>
                     </div>
-                    </div>
+
                     <div className="gRWngx">
                         <h1>Choose Default URL</h1>
                         <p>This is the URL/Link Givers will see when they go to "Give Now" from their account</p>
-                            <select class="select dbSzIv">
-                            <option value="1">www.kisumuchurh.com</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five</option>
-                            <option value="6">Six</option>
-                            <option value="7">Seven</option>
-                            <option value="8">Eight</option>
-                            </select>
-                       
+                     <select class="select dbSzIv fsEGGn">
+                                    Select Website URL
+                                {this.state.posts.map((post, index)=>(
+                                    <option>Select Website Url</option>,
+                                <option key = {index}>{post. weburl.web_url}</option>
+                                ))}
+                                </select>
+                        
                     </div> 
+                    <Install/>
 
                     <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-
+                        aria-hidden="true">
                     <div class="modal-dialog modal-full-height modal-right" role="document">
-
-
-                        <div class="modal-content">
+                    <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+                            <h4 class="modal-title w-100" id="myModalLabel">Add Web URL</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                        <form onSubmit={this.handleSubmit}>
+                         <form onSubmit={this.handleSubmit}>
 
                         <div class="form-outline mb-4">
                             <label class="form-label jtmHyL" for="form4Example2">Add Website Url</label>
@@ -95,13 +111,10 @@ class Installation extends React.Component{
                         </div>
                         <button type="submit" className="fqIstn">Save Changes</button>
 
-                        </form>
+                        </form> 
        
                         </div>
-                        <div class="modal-footer justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                    
                     </div>
                 </div>
            </div>
