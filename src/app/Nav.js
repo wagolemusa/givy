@@ -49,6 +49,9 @@ function Nav (){
                     <Link to="/app/Setting"><i class="fas fa-cog"></i>&nbsp;&nbsp;Setting</Link>
                     </li>
                     <li>
+                    <Link to="/app/Give"><i class="fas fa-cog"></i>&nbsp;&nbsp;Triger Url</Link>
+                    </li>
+                    <li>
                     <Link to={'/'} onClick={() => localStorage.clear()}><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</Link>
                     </li>
                 </ul>
