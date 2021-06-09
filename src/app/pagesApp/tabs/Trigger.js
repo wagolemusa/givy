@@ -17,18 +17,21 @@ class Trigger extends React.Component{
         this.getAllPost();
     }
     getAllPost = async () =>{
-        const { data} = await axios.get("https://givyv2.herokuapp.com/web/api/get/url",{
+        const { data} = await axios.get("https://givyv2.herokuapp.com/users/api/authenticate",{
             headers: {
                 'Authorization': token,
                 'Accept' : 'application/json',
                 'Content-Type': 'application/json'
             }
         })
-        this.setState({posts: data.query})
-    
+        this.setState({posts: data.user})
+       
     }
 
     render(){
+         console.log(this.state.posts)
+
+         let highdata = this.state.posts._id
         
     return (
         <>
@@ -60,13 +63,13 @@ class Trigger extends React.Component{
                     <div className="row">
                         <div className="col">
                             <h3>Suggest frequency</h3>
-                            <select class="select dbSzIv fsEGGn">
+                            {/* <select class="select dbSzIv fsEGGn">
                                     Select Website URL
                                 {this.state.posts.map((post, index)=>(
                                     <option>Select Website Url</option>,
                                 <option key = {index}>{post. weburl.web_url}</option>
                                 ))}
-                                </select>
+                                </select> */}
                         </div>
                         <div className="col">
                         <h3>Suggest start</h3>
@@ -88,7 +91,7 @@ class Trigger extends React.Component{
                         <h2>Copy and use this link:</h2>
                     </div>
                         <div className="bjALwV">
-
+                            <h2>{highdata}</h2>
                         </div>
                 </div>
         </>

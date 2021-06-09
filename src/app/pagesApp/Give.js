@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 export default class Give extends Component{
 
-   
-
     constructor(props){
         super(props)
         this.handleChange = this.handleChange.bind(this)
