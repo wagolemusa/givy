@@ -106,7 +106,7 @@ class Trigger extends React.Component{
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> 
             <span class="token attr-name"> src</span><span class="token attr-value">
                 <span class="token punctuation attr-equals">=</span>
-                <span class="token punctuation">"</span>http://localhost:3000/give/{highdata}<span class="token punctuation">"</span>
+                <span class="token punctuation">"</span>https://givyv2.herokuapp.com/give/{highdata}<span class="token punctuation">"</span>
                 </span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>
                 <span class="token punctuation">"</span>540<span class="token punctuation">"</span></span> <span class="token attr-name">width</span>
                 <span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span> 
