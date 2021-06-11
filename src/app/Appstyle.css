@@ -310,6 +310,11 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   padding: 5px 0;
 }
 
+.tabstyle i{
+  font-size: 25px;
+  
+}
+
 /* End of Design hosted Ifrome */
 .dbSzIv {
 
@@ -345,6 +350,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   letter-spacing: -0.0208333em;
   color: rgb(0, 188, 235);
   font-family: Lato;
+}
+.input-group i{
+  color: #0f4357;
+  font-size: 20px;
 }
 .iYhAcm {
   caret-color: inherit;
