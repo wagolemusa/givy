@@ -90,23 +90,13 @@ class Trigger extends React.Component{
                     <div className="RWng">
                         <h2>Copy and use this link:</h2>
                     </div>
-                        <div className="bjALwV">
+            <div className="bjALwV">
                             
-                        {/* <iframe src="http://localhost:3000/give/{highdata}" width='100%'
-                                height="1600" frameBorder="0" scrolling="auto"></iframe> */}
-
-                          {/* <iframe allowpaymentrequest="" frameborder="0" height="900px" 
-                          name="donorbox" scrolling="no" seamless="seamless" 
-
-                          src="http://localhost:3000/give/{highdata}" 
-                          width="100%"></iframe> */}
-            
-
             <pre class=" language-markup"><code class=" language-markup">
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> 
             <span class="token attr-name"> src</span><span class="token attr-value">
                 <span class="token punctuation attr-equals">=</span>
-                <span class="token punctuation">"</span>https://givyv2.herokuapp.com/give/{highdata}<span class="token punctuation">"</span>
+                <span class="token punctuation">"</span>https://givyapp.herokuapp.com/give/{highdata}<span class="token punctuation">"</span>
                 </span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>
                 <span class="token punctuation">"</span>540<span class="token punctuation">"</span></span> <span class="token attr-name">width</span>
                 <span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span> 
