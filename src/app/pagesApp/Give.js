@@ -142,10 +142,11 @@ export class Howmuch extends Component{
                     <select class="select sectone">
                             <option value="1">How Do You Want To Pay</option>
                                 <option value="1">One-time</option>
-                                <option value="2">Monthly</option>
-                                <option value="3">Annually</option>
-                                <option value="8">quarterly</option>
-                                <option value="8">semiannually</option>
+                                <option value="8">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Weekly</option>
+                                <option value="8">Yearly</option>
+                                
                         </select>
                         <br/> <br/>
                         <div class="input-group">
