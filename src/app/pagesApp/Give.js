@@ -129,6 +129,7 @@ export class Howmuch extends Component{
         `
         const { values, handleChange } = this.props;
         return(
+            
             <div className="container">
                 <br/>
                     <Headerd>
@@ -138,12 +139,20 @@ export class Howmuch extends Component{
                     <div className="page1">
                     <br/>
                     <form >
+                    <select class="select sectone">
+                            <option value="1">How Do You Want To Pay</option>
+                                <option value="1">One-time</option>
+                                <option value="2">Monthly</option>
+                                <option value="3">Annually</option>
+                                <option value="8">quarterly</option>
+                                <option value="8">semiannually</option>
+                        </select>
+                        <br/> <br/>
                         <div class="input-group">
-
                         <div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
 						</div>
-                        
+
                         <input type="number" required="required" id="form2Example1" 
                             onChange={handleChange('amount')}
                             defaultValue={values.amount} 
@@ -161,7 +170,7 @@ export class Howmuch extends Component{
                         </div>
                     
                     </div>
-               
+             
             
         )
     }
