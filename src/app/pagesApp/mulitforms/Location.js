@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Location = ({formData, setForm, navigation}) =>{
-    const { countryCd, address, city, stateCd, zip } = formData
-// console.log(props)
+class Location extends Component{
 
-    return(
-        <div className="pages">
+    continue = e =>{
+        e.preventDefault();
+        this.props.nextStep()
+    }
+
+    render(){
+        const { values, handleChange} = this.props;
+        return(
+            <div className="pages">
             <div className="activ">
                 <h2>Activate your Account</h2>
             </div>
@@ -13,37 +18,49 @@ const Location = ({formData, setForm, navigation}) =>{
                 <div className="logery">
                 
                     <div className="multform">
-                        <h3>Provide your Location</h3>
+                        <div className="row">
+                            <div className="col-md-9">
+                            <h3>Provide your Location</h3>
+                            </div>
+                        </div>
                     </div>
                         <div className="card">
                         <div class="card-body">
                         <div class="form-outline">
                             <label class="form-label" for="form1">Country</label>
-                            <input type="text" name="countryCd" value={countryCd} onChange={setForm} id="form1" class="form-control" required/>
+                            <input type="text" name="countryCd" 
+                             onChange={handleChange('countryCd')}
+                             defaultValue={values.countryCd} id="form1" class="form-control" required/>
                         </div>
                         <div class="form-outline">
                             <label class="form-label" for="form1">Address</label>
-                            <input type="text" name="address" value={address} onChange={setForm} id="form1" class="form-control" required/>
+                            <input type="text" name="address" 
+                                onChange={handleChange('address')}
+                                defaultValue={values.address} id="form1" class="form-control" required/>
                         </div>
                         <div class="form-outline">
                             <label class="form-label" for="form1">City</label>
-                            <input type="text" name="city" value={city} onChange={setForm} id="form1" class="form-control" required/>
+                            <input type="text" name="city" 
+                                onChange={handleChange('city')}
+                                defaultValue={values.city} id="form1" class="form-control" required/>
                         </div>
                         <div class="form-outline">
                             <label class="form-label" for="form1">State</label>
-                            <input type="text" name="stateCd"  value={stateCd}  onChange={setForm} id="form1" class="form-control" required/>
+                            <input type="text" name="stateCd"  
+                                onChange={handleChange('stateCd')}
+                                defaultValue={values.stateCd} id="form1" class="form-control" required/>
                         </div>
                         <div class="form-outline">
                             <label class="form-label" for="form1">Zip</label>
-                            <input type="text" name="zip" value={zip} onChange={setForm} id="form1" class="form-control" required/>
+                            <input type="text" name="zip" 
+                                onChange={handleChange('zip')}
+                                defaultValue={values.zip} id="form1" class="form-control" required/>
                         </div>
                         <br/>
                         <button 
-                            type="button" 
-                            class="btn btn-primary"
-                            onClick={() => navigation.next()}
-                        >
-                            Next
+                             onClick={this.continue}
+                             class="btn btn-primary btn-block mb-4">
+                             Continue &nbsp; <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                     </div>
@@ -51,7 +68,9 @@ const Location = ({formData, setForm, navigation}) =>{
             
             </div>
         </div>
-    )
+        )
+    }
 }
+
 
 export default Location

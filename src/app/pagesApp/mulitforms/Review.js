@@ -1,108 +1,139 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export const Review = ({ formData, navigation  }) => {
-    const { go } = navigation;
-    const {
-        countryCd,
-        address1,
-        city,
-        stateCd,
-        zip,
-        legalBusinessName,
-        businessPhone,
-        websiteAddress,
-        ownerName,
-        ownerEmail,
-        ownerTitle,
-        ownerMobilePhone,
-        ownerDob,
-        ownerSSN,
-        bankAcctNum,
-        bankRoutingNum,
-    } = formData
+let token = localStorage.getItem('token')
+class Review extends Component{
 
-        return (
-        <div className="pages">
-            <RenderAccordion summary="Location" go={go} details={[
-                {'Country': countryCd },
-                {'address': address1},
-                {'city': city},
-                {'state': stateCd},
-                {'zip': zip}
-                ]}
-            />
-            <RenderAccordion summary="Business" go={go} details={[
-                {'Legal Business Name': legalBusinessName },
-                {'Business Phone': businessPhone},
-                {'Website Address':  websiteAddress}
-                ]}
-            />
-            <RenderAccordion summary="Representative" go={go} details={[
-                {'Owner Church Name': ownerName },
-                {'Owner Email': ownerEmail},
-                {'Title': ownerTitle},
-                {'Mobile Phone': ownerMobilePhone},
-                {'Date of Birth': ownerDob}
-                ]}
-            />
-            <RenderAccordion summary="Bank" go={go} details={[
-            
-                {'soucial securty Number': ownerSSN },
-                {'Bank Account': bankAcctNum},
-                {'Routing Number': bankRoutingNum}
-                ]}
-            />
-            <br/>
-             <center>
-             <button type="button" class="btn btn-primary">Submit</button>
-             </center>
-                
-            
-        </div>
+    constructor(props){
+        super(props)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+    continue = e =>{
+        e.preventDefault();
+        this.props.nextStep()
+    }
+    back = e =>{
+        e.preventDefault();
+        this.props.prevStep();
+    }
+    handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(this.props);
+        fetch ('https://senditparcel.herokuapp.com/api/v2/parcels',{
+            method: 'POST',
+            body: JSON.stringify(this.props.values),
+            headers: {
+                'Content-Type' : 'application/json',
+                "Accept":"application/json",
+                "Authorization":token
+            }
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+            // console.log(data)
+            document.getElementById("error").innerHTML = data["message"]
+        })
+        .catch(error => console.log('error:', error));
+    }
+    render(){
+        
+        const { values: {countryCd,
+            address1,city,stateCd,zip, legalBusinessName,businessPhone,
+            websiteAddress,ownerName,ownerEmail,ownerTitle,ownerMobilePhone,
+            ownerDob,ownerSSN,bankAcctNum,bankRoutingNum}} = this.props
 
-    )
-}
+        return(
+            <div className="pages">
+                <div class="container">
+                <form onSubmit={this.handleSubmit}>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="accordion" class="checkout">
+                                <div class="panel checkout-step">
+                                    <div> <span class="checkout-step-number">1</span>
+                                    <h4 class="checkout-step-title"> 
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" > Location Details</a></h4>
+                                    </div>
 
-export const RenderAccordion = ({ summary, details, go }) =>(
-    <div class="container-fluid bg-gray" id="accordion-style-1">
-        <div class="container">
-            <section>
-                <div class="row">
-                    <div class="col-10 mx-auto">
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  <i class="fa fa-amazon main"></i><i class="fa fa-angle-double-right mr-3"></i>View summaries
-                                </button>
-                              </h5>
-                                </div>
-    
-                                <div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        { details.map((data, index)=>{
-                                            const objkey = Object.keys(data)[0];
-                                            const objvalue = data[Object.keys(data)[0]];
+                                    <ul class="list-group">
+                                        <li class="list-group-item">{countryCd }</li>
+                                        <li class="list-group-item">{address1}</li>
+                                        <li class="list-group-item">{city}</li>
+                                        <li class="list-group-item">{stateCd}</li>
+                                        <li class="list-group-item">{zip}</li>
+                                    </ul>
+                                    </div>
+                    
+                                <div class="panel checkout-step">
+                                    <div role="tab" id="headingTwo"> <span class="checkout-step-number">2</span>
+                                        <h4 class="checkout-step-title"> 
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" > Business Details </a> </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="checkout-step-body">
+                                            <div class="checout-address-step">
 
-                                            return<li key={index}> {`${objkey}: ${objvalue}`}</li>
-                                     
-                                        })}
-                                        <i class="fas fa-pencil-alt" onClick={() => go(`${summary.toLowerCase()}`)}>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">{legalBusinessName }</li>
+                                                <li class="list-group-item"> {businessPhone}</li>
+                                                <li class="list-group-item">{websiteAddress}</li>
                                             
-                                        </i>
-                                        
+                                            </ul>
+                
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                
+                                <div class="panel checkout-step">
+                                    <div role="tab" id="headingThree"> <span class="checkout-step-number">3</span>
+                                        <h4 class="checkout-step-title"> 
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  > Business Owner Information</a> </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="checkout-step-body"> 
+
+                                        <ul class="list-group">
+                                        <li class="list-group-item">{ownerName }</li>
+                                        <li class="list-group-item">{ownerEmail}</li>
+                                        <li class="list-group-item">{ownerTitle}</li>
+                                        <li class="list-group-item">{ownerMobilePhone}</li>
+                                        <li class="list-group-item">{ownerDob}</li>
+                                    </ul>     
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="panel checkout-step">
+                                    <div role="tab" id="headingFour"> <span class="checkout-step-number">4</span>
+                                        <h4 class="checkout-step-title"> 
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Bank Information</a> </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="checkout-step-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">{ownerSSN }</li>
+                                        <li class="list-group-item"> { bankAcctNum}</li>
+                                        <li class="list-group-item">{bankRoutingNum}</li>
+                                            
+                                    </ul> 
+                                    </div>
+                                    </div>
+                                </div>
+
                             </div>
+                            <button type="submit" class="btn btn-primary">
+                                    Save
+                            </button>
+                        
+                                    
+                         
+                           
                         </div>
-                       
-                    </div>	
-                    
-                </div>
-            </section>
+                    </div>
+                </form>
+                
+            </div>
         </div>
-    </div>
-   
-)
+        )
+    }
+ }
+
+ export default Review;
