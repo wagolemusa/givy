@@ -46,8 +46,7 @@ export default class Give extends Component{
 
 
     render(){
-
-      
+        
         const { step } = this.state;
         const { amount, firstname, lastname, 
             email, account, expiry, cvv2, bankAcctNum, bankRoutingNum,

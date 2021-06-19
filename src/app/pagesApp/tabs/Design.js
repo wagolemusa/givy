@@ -2,54 +2,9 @@ import React from 'react'
 
 class Design extends React.Component{
 
-    userData;
-    constructor(props){
-        super(props)
-        this.imageHendler = this.imageHendler.bind(this)
-        this.onChangecolor = this.onChangecolor.bind(this)
-        this.onChangelogo = this.onChangelogo.bind(this)
-        this.onChangeinterval = this.onChangeinterval.bind(this)
-
-        this.state ={
-            logo_file_id: '',
-            color: '',
-            interval: ''
-        }
-    }
-    onChangelogo(event){
-        this.setState({ logo_file_id: event.target.value })
-    }
-    onChangecolor(event){
-        this.setState({ color: event.target.value })
-    }
-    onChangeinterval(event){
-        this.setState({ interval: event.target.value })
-    }
-    onSubmit(event){
-        event.prevateDefualt()
-    }
-
-    componentWillMount(){
-        this.userData = JSON.parse(localStorage.getItem('designcolor'));
-        if(localStorage.getItem('designcolor')){
-            this.setState({
-                logo_file_id: this.userData.logo_file_id,
-                color: this.userData.color,
-                interval: this.userData.interval
-            })
-        }else{
-            this.setState({
-                logo_file_id: '',
-                color: '',
-                interval: ''
-            })
-        }
-
-    }
-
-    componentDidUpdate(nextPress, nextState){
-        localStorage.setItem('designcolor', JSON.stringify(nextState))
-
+    continue = e =>{
+        e.preventDefault();
+        this.props.nextStep();
     }
 
     state = {
@@ -69,53 +24,53 @@ class Design extends React.Component{
 
 
     render(){
+        const {values, handleChange} = this.props
         const { profileImg} = this.state
 
         return(
-            <>
-            <div className="row">
+            <div className="pages">
+                <div className="row">
                 <div className="col-md-6">
                      <h1>Upload Your Logo</h1>
                      <p>We recommend a strong, simple icon in a single solid color for the best visual impact. Generally speaking, 
                         black or a strong contrast color for light mode, 
                         and white usually works best for dark mode.
                     </p>
-            <form onSubmit={this.onSubmit}>
                 <div className="uploadimage">            
                     <i class="fa fa-pencil-alt"></i>
-                <input class="browse-input1" type="file" id="input" accept="image/*" onChange={this.imageHendler} />      
+                <input class="browse-input1" type="file" id="input" accept="image/*" 
+                onChange={handleChange('logo_file_id')}
+                defaultValue={values.logo_file_id}/>      
                 <span class="lu2oe2-3 kryKBZ">Drag and drop here (or tap and browse) to add a logo to your GivingFlow.</span>
                 </div>
                 <br/>
                 <p>Input color that we’ll make sure it looks good everywhere on your GivingFlow and email receipts</p>
                 <div class="form-outline mb-4">
                     <label class="form-label jtmHyL" for="form4Example2">Input Color</label>
-                    <input type="text" id="form4Example2" class="form-control dbSzIv fsEGGn" value={this.state.color} onChange={this.onChangecolor} /> 
+                    <input type="text" 
+                    onChange={handleChange('color')}
+                    defaultValue={values.color} id="form4Example2" class="form-control dbSzIv fsEGGn" /> 
                 </div>
-
-                <h2>Enable additional Quick Intervals</h2>
-
-                <p>There are more recurring giving intervals you can make available to your
-                church if you like. These options can help people quickly setup a regular 
-                 giving that closely aligns with when they receive their paychecks.</p>
-                 <select class="select dbSzIv fsEGGn" value={this.state.interval} onChange={this.onChangeinterval}>
-                    <option>Choose One</option>
-                    <option>EVERY 1ST AND 15TH</option>
-                    <option>EVERY 5TH AND 20TH</option>
-                </select>
-                <button type="submit" className="fqIstn">Save Changes</button>
-            </form>
+                <button 
+                    type="submit" 
+                    onClick={this.continue} 
+                    className="fqIstn">Continue
+                </button>
+            
             </div>
 
 
             <div className="col-md-6">
                 <div className="img-holder">
-                    <img src={profileImg} alt="" value={this.state.logo_file_id} onChange={this.onChangelogo}  id="img" className="img"/>
+                    <img src={profileImg} alt="" 
+                     onChange={handleChange('logo_file_id')}
+                     defaultValue={values.logo_file_id}
+                      onChange={this.onChangelogo}  id="img" className="img"/>
                 </div>
            </div>
           
         </div>
-            </>
+            </div>
         )
     }
 }
