@@ -41,22 +41,22 @@ class Business extends Component{
                         <div class="card-body">
             
                             <div class="form-outline">
-                                <label class="form-label" for="form1">Legal Business Number </label>
-                                <input type="text" name="legalBusinessName" 
-                                onChange={handleChange('legalBusinessName')}
-                                defaultValue={values.legalBusinessName} id="form1" class="form-control" required/>
+                                <label class="form-label" for="form1">Region</label>
+                                <input type="text" name="region" 
+                                onChange={handleChange('region')}
+                                defaultValue={values.region} id="form1" class="form-control" required/>
                             </div>
                             <div class="form-outline">
-                                    <label class="form-label" for="form1">Business Phone Number</label>
-                                    <input type="number" name="businessPhone" 
-                                        onChange={handleChange('businessPhone')}
-                                        defaultValue={values.businessPhone} id="form1" class="form-control" required/>
+                                    <label class="form-label" for="form1">Phone</label>
+                                    <input type="number" name="phone" 
+                                        onChange={handleChange('phone')}
+                                        defaultValue={values.phone} id="form1" class="form-control" required/>
                             </div>
                             <div class="form-outline">
-                                    <label class="form-label" for="form1">Website URL</label>
-                                    <input type="text" name="websiteAddress" 
-                                        onChange={handleChange('websiteAddress')}
-                                        defaultValue={values.websiteAddress} id="form1" class="form-control" required/>
+                                    <label class="form-label" for="form1">Postal</label>
+                                    <input type="text" name="postal" 
+                                        onChange={handleChange('postal')}
+                                        defaultValue={values.postal} id="form1" class="form-control" required/>
                             </div><br/>
                             <button 
                                     onClick={this.continue}

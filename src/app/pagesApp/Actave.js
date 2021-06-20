@@ -16,22 +16,17 @@ class Actave extends Component{
     }
         state = {
             step: 1,
-            countryCd: "",
-            address1: "",
+            region: "",
+            phone: "",
+            accttype: "",
+            postal: "",
+            expiry: "",
             city: "",
-            stateCd: "",
-            zip: "",
-            legalBusinessName: "",
-            businessPhone: "",
-            websiteAddress: "",
-            ownerName: "",
-            ownerEmail: "",
-            ownerTitle: "",
-            ownerMobilePhone: "",
-            ownerDob: "",
-            ownerSSN: "",
-            bankAcctNum: "",
-            bankRoutingNum: "",
+            country: "",
+            address: "",
+            merchid: "",
+            name: "",
+            account: ""
         };
     // Proceed to next step
     nextStep = () =>{
@@ -55,16 +50,12 @@ class Actave extends Component{
 
     render(){
         const { step } = this.state;
-        const { countryCd, address1, city, stateCd,
-            zip, legalBusinessName, businessPhone, websiteAddress,
-            ownerName,ownerEmail, ownerTitle, ownerMobilePhone,
-            ownerDob, ownerSSN, bankAcctNum, bankRoutingNum
+        const { region, phone, accttype, postal, expiry,city,
+        country, address, merchid, name, account
         }  = this.state
 
-        const values = { countryCd, address1, city, stateCd,
-            zip, legalBusinessName, businessPhone, websiteAddress,
-            ownerName,ownerEmail, ownerTitle, ownerMobilePhone,
-            ownerDob, ownerSSN, bankAcctNum, bankRoutingNum
+        const values = { region, phone, accttype, postal, expiry,city,
+            country, address, merchid, name, account
         }
         switch(step){
             case 1:
@@ -88,17 +79,6 @@ class Actave extends Component{
                 )
             case 3:
                 return(
-                    <Representative
-                        nextStep={this.nextStep}
-                        prevStep={this.prevStep}
-                        handleChange={this.handleChange}
-                        values={values}
-
-                    />
-                )
-
-            case 4:
-                return(
                     <Bank 
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
@@ -106,7 +86,7 @@ class Actave extends Component{
                         values={values}
                     />
                 )
-            case 5:
+            case 4:
                 return(
                     <Review
                         nextStep={this.nextStep}
