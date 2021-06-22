@@ -11,7 +11,9 @@ class Trigger extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     state ={
-        posts: []
+        posts: [],
+        logo_file_id: ''
+
     }
     componentDidMount =() =>{
         this.getAllPost();
@@ -30,6 +32,9 @@ class Trigger extends React.Component{
 
     handleSubmit = (e) => {
         e.preventDefault()
+       
+        const  formData = new FormData();
+        formData.append('logo_file_id', this.state.logo_file_id)
         console.log(this.props);
         fetch ('https://givyv2.herokuapp.com/design/api/design/create',{
             method: 'POST',
@@ -51,6 +56,9 @@ class Trigger extends React.Component{
         e.preventDefault();
         this.props.prevStep()
     }
+    onFilechange(e){
+        this.setState({ logo_file_id: e.target.files[0]})
+    }
     render(){
         const { values: {logo_file_id, color,
             sms_thank_you_title, sms_body,
@@ -59,7 +67,8 @@ class Trigger extends React.Component{
          console.log(this.state.posts)
 
          let highdata = this.state.posts._id
-        
+            
+   
     return (
         <div className="pages">
             <div className="gRWngx">
@@ -67,7 +76,7 @@ class Trigger extends React.Component{
                     <div className="col-md-6">
                 <form onSubmit={this.handleSubmit} encType="multiport/form-data">
                     <ul class="list-group">
-                        <li class="list-group-item">{logo_file_id }</li>
+                        <li class="list-group-item">{logo_file_id} </li>
                         <li class="list-group-item"><b>Color|</b> &nbsp;&nbsp;{color}</li>
                         <li class="list-group-item"><b>Message Title|</b>&nbsp;&nbsp;{sms_thank_you_title}</li>
                         <li class="list-group-item"><b>Message body|</b>&nbsp;&nbsp;{sms_body}</li>

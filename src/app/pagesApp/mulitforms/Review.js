@@ -46,10 +46,10 @@ class Review extends Component{
     }
     render(){
 
-        let merchid = "800000000605"
+        // let merchid = "800000000605"
         
         const { values: {region, phone, accttype, postal, expiry,city,
-            country, address, name, account}} = this.props
+            country, address, merchid, name, account}} = this.props
 
         return(
             <div className="pages">
