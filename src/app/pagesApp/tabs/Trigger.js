@@ -8,10 +8,12 @@ class Trigger extends React.Component{
 
     constructor(props){
         super(props)
-        // this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
     state ={
-        posts: []
+        posts: [],
+        logo_file_id: ''
+
     }
     componentDidMount =() =>{
         this.getAllPost();
@@ -28,70 +30,77 @@ class Trigger extends React.Component{
        
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault()
+       
+        const  formData = new FormData();
+        formData.append('logo_file_id', this.state.logo_file_id)
+        console.log(this.props);
+        fetch ('https://givyv2.herokuapp.com/design/api/design/create',{
+            method: 'POST',
+            body: JSON.stringify(this.props.values),
+            headers: {
+                'Content-Type' : 'application/json',
+                "Accept":"application/json",
+                "Authorization":token
+            }
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+            // console.log(data)
+            document.getElementById("error").innerHTML = data["message"]
+        })
+        .catch(error => console.log('error:', error));
+    }
+    back = e =>{
+        e.preventDefault();
+        this.props.prevStep()
+    }
+    onFilechange(e){
+        this.setState({ logo_file_id: e.target.files[0]})
+    }
     render(){
+        const { values: {logo_file_id, color,
+            sms_thank_you_title, sms_body,
+            sms_reciept_body}} = this.props
+
          console.log(this.state.posts)
 
          let highdata = this.state.posts._id
-        
+            
+   
     return (
-        <>
-                <div className="gRWngx">
-                        <h1>Create GivingFlow triggers</h1>
-                        <p>It’s simple to make a trigger you can use anywhere (on your site, in an email, in your church app) that will open the GivingFlow on your website so you can lead people directly to give from wherever they are.
-                         Simply select a URL, add customizations if you like, then copy the link to use</p>
-
-                         <h3>choose A website url</h3>
-                            <select class="select dbSzIv fsEGGn">
-                            <option value="1">Choose One</option>
-                                <option value="1">www.kisumuchurh.com</option>
-                        </select>
-                    
-                    <div className="row">
-                        <div className="col">
-                            <h3>Suggest an amount</h3>
-                            <input type="number" id="form4Example2" class="form-control dbSzIv fsEGGn" placeholder="$" /> 
-                        </div>
-                        <div className="col">
-                        <h3>Suggest Fund</h3>
-                            <select class="select dbSzIv fsEGGn">
-                            <option value="1">Choose One</option>
-                                <option value="1">Ganeral Fun</option>
-                            </select>
-                        </div>
-                    </div>
+        <div className="pages">
+            <div className="gRWngx">
+                <div className="row">
+                    <div className="col-md-6">
+                <form onSubmit={this.handleSubmit} encType="multiport/form-data">
+                    <ul class="list-group">
+                        <li class="list-group-item">{logo_file_id} </li>
+                        <li class="list-group-item"><b>Color|</b> &nbsp;&nbsp;{color}</li>
+                        <li class="list-group-item"><b>Message Title|</b>&nbsp;&nbsp;{sms_thank_you_title}</li>
+                        <li class="list-group-item"><b>Message body|</b>&nbsp;&nbsp;{sms_body}</li>
+                        <li class="list-group-item"><b>Message Reciept|</b>&nbsp;&nbsp;{sms_reciept_body}</li>
+                    </ul>
                     <br/>
-                    <div className="row">
-                        <div className="col">
-                            <h3>Suggest frequency</h3>
-                            {/* <select class="select dbSzIv fsEGGn">
-                                    Select Website URL
-                                {this.state.posts.map((post, index)=>(
-                                    <option>Select Website Url</option>,
-                                <option key = {index}>{post. weburl.web_url}</option>
-                                ))}
-                                </select> */}
-                        </div>
-                        <div className="col">
-                        <h3>Suggest start</h3>
-                            <select class="select dbSzIv fsEGGn">
-                            <option value="1">Choose One</option>
-                                <option value="1">Today</option>
-                                <option value="2">Tomorrow</option>
-                                <option value="3">Friday</option>
-                                <option value="8">Next Week</option>
-                            </select>
-                            </div>
-                        </div>
-                
+                    <button type="submit" className="btn btn-primary">
+                        Save Changes
+                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit" onClick={this.back} className="btn btn-success">
+                        Back
+                    </button>
+                    </form>
+                    </div>
+                    
                     <div className="col-md-6">
 
-                    </div>
-                 
-                    <div className="RWng">
-                        <h2>Copy and use this link:</h2>
-                    </div>
-            <div className="bjALwV">
-                            
+                    </div>  
+                </div> 
+                <hr/>
+            <div className="RWng">
+                <h2>Copy and use this link:</h2>
+            </div>
+            <div className="bjALwV">          
             <pre class=" language-markup"><code class=" language-markup">
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> 
             <span class="token attr-name"> src</span><span class="token attr-value">
@@ -109,7 +118,7 @@ class Trigger extends React.Component{
                 </div>
                 </div>
             </div>
-        </>
+        </div>
     )
     }
 }

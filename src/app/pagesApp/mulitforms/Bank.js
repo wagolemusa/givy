@@ -38,22 +38,22 @@ class Bank extends Component{
                 <div className="card">
                     <div class="card-body">
                         <div class="form-outline">
-                                <label class="form-label" for="form1">Bank Routing Number</label>
-                                <input type="number" name="bankRoutingNum" 
-                                 onChange={handleChange('bankRoutingNum')}
-                                 defaultValue={values.bankRoutingNum} id="form1" class="form-control" required/>
+                                <label class="form-label" for="form1">Account</label>
+                                <input type="number" name="account" 
+                                 onChange={handleChange('account')}
+                                 defaultValue={values.account} id="form1" class="form-control" required/>
                             </div>
                             <div class="form-outline">
-                                <label class="form-label" for="form1">Bank Account Number</label>
-                                <input type="number" name="bankAcctNum"
-                                 onChange={handleChange('bankAcctNum')}
-                                 defaultValue={values.bankAcctNum} id="form1" class="form-control" required/>
+                                <label class="form-label" for="form1">account Type</label>
+                                <input type="number" name="accttype"
+                                 onChange={handleChange('accttype')}
+                                 defaultValue={values.accttype} id="form1" class="form-control" required/>
                             </div>
                             <div class="form-outline">
-                                <label class="form-label" for="form1">Owner SSN</label>
-                                <input type="text" name="ownerSSN" 
-                                 onChange={handleChange('ownerSSN')}
-                                 defaultValue={values.ownerSSN} id="form1" class="form-control" required/>
+                                <label class="form-label" for="form1">Expiry</label>
+                                <input type="date" name="expiry" 
+                                 onChange={handleChange('expiry')}
+                                 defaultValue={values.expiry} id="form1" class="form-control" required/>
                             </div>
                             <br/>
                             <button 

@@ -7,54 +7,78 @@ import Message from './tabs/Message';
 import Trigger from './tabs/Trigger';
 
 class Recuring extends Component{
-    render(){
-        // if (this.state.user){
-        //     return (
-        //         <h2>Hi {this.state.user.firstname}{this.state.firstnameuser.lastname}</h2>
-        //     )
-        // }
 
-        return(
-            <div className="pages">
-                <div class="container">
-                    <div className="tabas">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#home">Design</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#menu1">Messages</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#menu2">Installation</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#menu3">Triggers</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="sytle_giver">
-                        <div class="tab-content">
-                            <div id="home" class="container tab-pane active">
-                                <Design/>
-                    </div>
-                    <div id="menu1" class="container tab-pane fade">
-                        <Message/>
+    constructor(props){
+        super(props)
+        this. handleChange = this. handleChange.bind(this)
+    }
 
-                    </div>
-                    <div id="menu2" class="container tab-pane fade">
-                        <Installation/>
-                    </div>
+    state = {
+        step: 1,
+        logo_file_id: '',
+        color: '',
+        sms_thank_you_title: '',
+        sms_body: '',
+        sms_reciept_body:''
+    }
 
-                    <div id="menu3" class="container tab-pane fade">
-                        <Trigger/>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-    
-        )
+    // Proceed to next step
+    nextStep = () =>{
+        const { step } = this.state
+        this.setState({
+            step: step + 1
+        });
+    }
+
+    // Go back to prev step
+
+    prevStep = () =>{
+        const { step } = this.state
+        this.setState({
+            step: step - 1
+        });
+    }
+
+    // Handle input fields Change
+    handleChange = input => e =>{
+        this.setState({[input]: e.target.value})
+    }
+
+    render(){ 
+        const { step } = this.state;
+        const { logo_file_id, color, sms_thank_you_title, sms_body, sms_reciept_body} = this.state
+        const values = {  logo_file_id, color, sms_thank_you_title, sms_body, sms_reciept_body}
+        
+        switch(step){
+            case 1:
+                return (
+                    <Design
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange}
+                    values={values}
+                    />
+                )
+
+            case 2:
+                return(
+                    <Message 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+            case 3:
+                return(
+                    <Trigger 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+
+        }
     }
 }
 export default Recuring

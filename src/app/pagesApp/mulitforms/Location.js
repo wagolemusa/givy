@@ -2,12 +2,18 @@ import React, { Component } from 'react'
 
 class Location extends Component{
 
+    constructor(props){
+        super(props)
+        this.state = { merchid:"800000000605"}
+    }
+
     continue = e =>{
         e.preventDefault();
         this.props.nextStep()
     }
 
     render(){
+        let merchid = "800000000605"
         const { values, handleChange} = this.props;
         return(
             <div className="pages">
@@ -26,11 +32,19 @@ class Location extends Component{
                     </div>
                         <div className="card">
                         <div class="card-body">
+
                         <div class="form-outline">
-                            <label class="form-label" for="form1">Country</label>
-                            <input type="text" name="countryCd" 
-                             onChange={handleChange('countryCd')}
-                             defaultValue={values.countryCd} id="form1" class="form-control" required/>
+                           
+                            <input type="hidden" name="name" 
+                             onChange={handleChange('merchid')}
+                             defaultValue={merchid} id="form1" class="form-control" required/>
+                        </div>
+
+                        <div class="form-outline">
+                            <label class="form-label" for="form1">Full Names</label>
+                            <input type="text" name="name" 
+                             onChange={handleChange('name')}
+                             defaultValue={values.name} id="form1" class="form-control" required/>
                         </div>
                         <div class="form-outline">
                             <label class="form-label" for="form1">Address</label>
@@ -45,16 +59,10 @@ class Location extends Component{
                                 defaultValue={values.city} id="form1" class="form-control" required/>
                         </div>
                         <div class="form-outline">
-                            <label class="form-label" for="form1">State</label>
-                            <input type="text" name="stateCd"  
-                                onChange={handleChange('stateCd')}
-                                defaultValue={values.stateCd} id="form1" class="form-control" required/>
-                        </div>
-                        <div class="form-outline">
-                            <label class="form-label" for="form1">Zip</label>
-                            <input type="text" name="zip" 
-                                onChange={handleChange('zip')}
-                                defaultValue={values.zip} id="form1" class="form-control" required/>
+                            <label class="form-label" for="form1">Country</label>
+                            <input type="text" name="country"  
+                                onChange={handleChange('country')}
+                                defaultValue={values.country} id="form1" class="form-control" required/>
                         </div>
                         <br/>
                         <button 
