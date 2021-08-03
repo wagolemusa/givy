@@ -76,7 +76,7 @@ class Trigger extends React.Component{
                     <div className="col-md-6">
                 <form onSubmit={this.handleSubmit} encType="multiport/form-data">
                     <ul class="list-group">
-                        <li class="list-group-item">{logo_file_id} </li>
+                        <li class="list-group-item">{this.onFileChange} </li>
                         <li class="list-group-item"><b>Color|</b> &nbsp;&nbsp;{color}</li>
                         <li class="list-group-item"><b>Message Title|</b>&nbsp;&nbsp;{sms_thank_you_title}</li>
                         <li class="list-group-item"><b>Message body|</b>&nbsp;&nbsp;{sms_body}</li>

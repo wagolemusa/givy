@@ -32,37 +32,17 @@ class Location extends Component{
                     </div>
                         <div className="card">
                         <div class="card-body">
-
                         <div class="form-outline">
-                           
-                            <input type="hidden" name="name" 
-                             onChange={handleChange('merchid')}
-                             defaultValue={merchid} id="form1" class="form-control" required/>
-                        </div>
-
-                        <div class="form-outline">
-                            <label class="form-label" for="form1">Full Names</label>
-                            <input type="text" name="name" 
-                             onChange={handleChange('name')}
-                             defaultValue={values.name} id="form1" class="form-control" required/>
+                            <label class="form-label" for="form1">Business  Owner Names</label>
+                            <input type="text" name="businessOwnerNames" 
+                             onChange={handleChange('businessOwnerNames')}
+                             defaultValue={values.businessOwnerNames} id="form1" class="form-control" required/>
                         </div>
                         <div class="form-outline">
-                            <label class="form-label" for="form1">Address</label>
-                            <input type="text" name="address" 
-                                onChange={handleChange('address')}
-                                defaultValue={values.address} id="form1" class="form-control" required/>
-                        </div>
-                        <div class="form-outline">
-                            <label class="form-label" for="form1">City</label>
-                            <input type="text" name="city" 
-                                onChange={handleChange('city')}
-                                defaultValue={values.city} id="form1" class="form-control" required/>
-                        </div>
-                        <div class="form-outline">
-                            <label class="form-label" for="form1">Country</label>
-                            <input type="text" name="country"  
-                                onChange={handleChange('country')}
-                                defaultValue={values.country} id="form1" class="form-control" required/>
+                            <label class="form-label" for="form1">Business Name</label>
+                            <input type="text" name="businessName" 
+                                onChange={handleChange('businessName')}
+                                defaultValue={values.businessName} id="form1" class="form-control" required/>
                         </div>
                         <br/>
                         <button 

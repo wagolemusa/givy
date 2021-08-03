@@ -14,14 +14,7 @@ export default class Give extends Component{
         firstname: '',
         lastname: '',
         email: '',
-        account: '',
-        expiry: '',
-        cvv2: '',
-        postal: '',
-        bankAcctNum: '',
-        bankRoutingNum: '',
-        bankAcctTypeCd: '',
-        bankName: ''
+        phone: ''
     }
     // Proceed to next step
     nextStep = () =>{
@@ -49,12 +42,10 @@ export default class Give extends Component{
         
         const { step } = this.state;
         const { amount, firstname, lastname, 
-            email, account, expiry, cvv2, bankAcctNum, bankRoutingNum,
-            bankAcctTypeCd, bankName} = this.state
+            email, phone} = this.state
 
         const values = { amount, firstname, lastname, 
-            email, account, expiry, cvv2, bankAcctNum, bankRoutingNum,
-            bankAcctTypeCd, bankName}
+            email, phone}
 
         switch(step){
             case 1:
@@ -138,15 +129,6 @@ export class Howmuch extends Component{
                     <div className="page1">
                     <br/>
                     <form >
-                    <select class="select sectone">
-                            <option value="1">How Do You Want To Pay</option>
-                                <option value="1">One-time</option>
-                                <option value="8">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Weekly</option>
-                                <option value="8">Yearly</option>
-                                
-                        </select>
                         <br/> <br/>
                         <div class="input-group">
                         <div class="input-group-prepend">
@@ -331,7 +313,7 @@ export class Card extends Component{
               <div className="tabstyle">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#home"><span><i class="far fa-credit-card"></i></span> &nbsp; &nbsp;CARD</a>
+                        <a class="nav-link" data-toggle="tab" href="#home"><span><i class="far fa-credit-card"></i></span> &nbsp; &nbsp;M-PESA</a>
                     </li>
                     <li>
 
@@ -340,7 +322,7 @@ export class Card extends Component{
                         
                      </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#menu1"> <span><i class="fas fa-university"></i></span> &nbsp;&nbsp;BANK TRANSFER</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu1"> <span><i class="fas fa-university"></i></span> &nbsp;&nbsp;PAYPALL</a>
                     </li>
                 </ul>
               </div>
@@ -355,43 +337,13 @@ export class Card extends Component{
 					<span class="input-group-text"><i class="far fa-credit-card"></i></span>
 				</div>
                 <input type="number" required="required" id="form2Example1"
-                    onChange={handleChange('account')}
-                    defaultValue={values.account} 
-                    class="form-control" placeholder="42424242424242" required
+                    onChange={handleChange('phone')}
+                    defaultValue={values.phone} 
+                    class="form-control" placeholder="254725783448" required
                    
                 />
                 </div>
                 <br/>
-            <div className="row">
-                <div className="col">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-					<span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-				</div>
-                <input type="date" required="required" id="form2Example1"
-                    onChange={handleChange('expiry')}
-                    defaultValue={values.cvv2} 
-                    class="form-control" placeholder="MM/ YY" required
-                />
-                </div>
-                </div>
-                
-                <div className="col">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-					<span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
-				</div>
-                <input type="text" required="required" id="form2Example1"
-                    onChange={handleChange('cvv2')}
-                    defaultValue={values.postal} 
-                    class="form-control" placeholder="CVC Code" required
-                />
-                </div>
-                <br/>
-            </div>
-            </div>
-            
-            
             <Button type="submit" 
                     onClick={this.continue}
                     class="btn btn-primary btn-block mb-4">
@@ -405,59 +357,17 @@ export class Card extends Component{
 
         <div id="menu1" class="container tab-pane fade">
         <div className="page1">
-        <br/>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-					<span class="input-group-text"><i class="far fa-credit-card"></i></span>
-				</div>
-                <input type="text" required="required" id="form2Example1"
-                    onChange={handleChange('bankAcctNum')}
-                    defaultValue={values.bankAcctNum} 
-                    class="form-control" placeholder="Bank Account Nunber" required
-                />
-                </div>
-                <br/>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-					<span class="input-group-text"><i class="fas fa-university"></i></span>
-				</div>
-                <input type="text" required="required" id="form2Example1"
-                    onChange={handleChange('bankRoutingNum')}
-                    defaultValue={values.bankRoutingNum} 
-                    class="form-control" placeholder="Bank Routing Number" required
-                />
-                </div>
-                <br/>
-                <div className="row">
-                    <div className="col">
-                    <div class="input-group">
-                    <div class="input-group-prepend">
-					<span class="input-group-text"><i class="fas fa-hand-holding-usd"></i></span>
-				    </div>
-                        <input type="text" required="required" id="form2Example1"
-                            onChange={handleChange('bankAcctTypeCd')}
-                            defaultValue={values.bankAcctTypeCd} 
-                            class="form-control" placeholder="Bank Type" required
-                        />   
-                    </div>
-                    </div>
-                    <br/>
-                    <div className="col">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-					        <span class="input-group-text"><i class="fas fa-file-invoice-dollar"></i></span>
-				        </div>
-                        <input type="text" required="required" id="form2Example1"
-                            onChange={handleChange('bankName')}
-                            defaultValue={values.bankName} 
-                            class="form-control" placeholder="Bank Name" required
-                        />   
-                    </div>
-
-                </div>
-                </div>
-
-            <br/>
+                <h2>PayPall</h2>
+        <select class="select sectone">
+            <option value="1">How Do You Want To Pay</option>
+            <option value="1">One-time</option>
+            <option value="8">Daily</option>
+            <option value="2">Weekly</option>
+            <option value="3">Weekly</option>
+            <option value="8">Yearly</option>
+                                
+        </select>
+        <br/><br/>
             <Button type="submit" 
                     onClick={this.continue}
                     class="btn btn-primary btn-block mb-4">
@@ -514,9 +424,8 @@ export class Card extends Component{
                 border: 1px solid transparent;
           
             `
-            const { values: { amount, firstname, lastname, email, account,
-                expiry,  cvv2,  postal,bankAcctNum, bankRoutingNum,  bankAcctTypeCd,
-                bankName} } = this.props;
+            const { values: { amount, firstname, lastname, 
+                email, phone} } = this.props;
                 
             return(
                 <div className="container">
@@ -535,14 +444,8 @@ export class Card extends Component{
                             <li class="list-group-item">{ firstname}</li>
                             <li class="list-group-item">{ lastname }</li>
                             <li class="list-group-item">{ email }</li>
-                            <li class="list-group-item">{ account }</li>
-                            <li class="list-group-item">{ expiry }</li>
-                            <li class="list-group-item">{ cvv2 }</li>
-                            <li class="list-group-item">{ postal }</li>
-                            <li class="list-group-item">{ bankAcctNum }</li>
-                            <li class="list-group-item">{ bankRoutingNum }</li>
-                            <li class="list-group-item">{ bankAcctTypeCd }</li>
-                            <li class="list-group-item">{ bankName }</li>
+                            <li class="list-group-item">{ phone }</li>
+                      >
                         </ul>
                     <br/>
                     <Button type="submit" 

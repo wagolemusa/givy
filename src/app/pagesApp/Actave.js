@@ -2,8 +2,8 @@ import React, { Component} from 'react'
 import { useForm, useStep } from "react-hooks-helper";
 import Location from './mulitforms/Location'
 import Business from './mulitforms/Business'
-import Registered from  './mulitforms/Registered'
-import Representative from './mulitforms/Representative'
+
+
 import Bank from './mulitforms/Bank'
 import Review from './mulitforms/Review'
 import Submit from './mulitforms/Submit'
@@ -16,17 +16,13 @@ class Actave extends Component{
     }
         state = {
             step: 1,
-            region: "",
-            phone: "",
-            accttype: "",
+            businessOwnerNames: "",
+            businessName: "",
+            county: "",
+            town: "",
+            estate: "",
             postal: "",
-            expiry: "",
-            city: "",
-            country: "",
-            address: "",
-            merchid: "",
-            name: "",
-            account: ""
+            businessPhoneNumber: ""
         };
     // Proceed to next step
     nextStep = () =>{
@@ -50,12 +46,12 @@ class Actave extends Component{
 
     render(){
         const { step } = this.state;
-        const { region, phone, accttype, postal, expiry,city,
-        country, address, merchid, name, account
+        const { businessOwnerNames, businessName, county, town, estate, postal,
+            businessPhoneNumber
         }  = this.state
 
-        const values = { region, phone, accttype, postal, expiry,city,
-            country, address, merchid, name, account
+        const values = {businessOwnerNames, businessName, county, town, estate, postal,
+            businessPhoneNumber
         }
         switch(step){
             case 1:

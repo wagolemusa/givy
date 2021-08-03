@@ -41,7 +41,7 @@ class Login extends React.Component{
     render(){
       
     if (this.state.loggedIn){
-        window.location.replace("/app/Giver")
+        window.location.replace("/dash/pages/Dash")
     }
 
     let error ='';
