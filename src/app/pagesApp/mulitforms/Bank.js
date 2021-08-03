@@ -38,22 +38,10 @@ class Bank extends Component{
                 <div className="card">
                     <div class="card-body">
                         <div class="form-outline">
-                                <label class="form-label" for="form1">Account</label>
-                                <input type="number" name="account" 
-                                 onChange={handleChange('account')}
-                                 defaultValue={values.account} id="form1" class="form-control" required/>
-                            </div>
-                            <div class="form-outline">
-                                <label class="form-label" for="form1">account Type</label>
-                                <input type="number" name="accttype"
-                                 onChange={handleChange('accttype')}
-                                 defaultValue={values.accttype} id="form1" class="form-control" required/>
-                            </div>
-                            <div class="form-outline">
-                                <label class="form-label" for="form1">Expiry</label>
-                                <input type="date" name="expiry" 
-                                 onChange={handleChange('expiry')}
-                                 defaultValue={values.expiry} id="form1" class="form-control" required/>
+                                <label class="form-label" for="form1">Business Phone Number</label>
+                                <input type="number" name="businessPhoneNumber" 
+                                 onChange={handleChange('businessPhoneNumber')}
+                                 defaultValue={values.businessPhoneNumber} id="form1" class="form-control" required/>
                             </div>
                             <br/>
                             <button 

@@ -22,7 +22,7 @@ class Business extends Component{
                     <div className="multform">
                     <div className="row">
                             <div className="col-md-9">
-                            <h3>Business Details</h3>
+                            <h3>Business Location</h3>
                             </div>
                             <div className="col-md-3">
                             <button
@@ -41,16 +41,22 @@ class Business extends Component{
                         <div class="card-body">
             
                             <div class="form-outline">
-                                <label class="form-label" for="form1">Region</label>
-                                <input type="text" name="region" 
-                                onChange={handleChange('region')}
-                                defaultValue={values.region} id="form1" class="form-control" required/>
+                                <label class="form-label" for="form1">County</label>
+                                <input type="text" name="county" 
+                                onChange={handleChange('county')}
+                                defaultValue={values.county} id="form1" class="form-control" required/>
                             </div>
                             <div class="form-outline">
-                                    <label class="form-label" for="form1">Phone</label>
-                                    <input type="number" name="phone" 
-                                        onChange={handleChange('phone')}
-                                        defaultValue={values.phone} id="form1" class="form-control" required/>
+                                    <label class="form-label" for="form1">Town</label>
+                                    <input type="number" name="town" 
+                                        onChange={handleChange('town')}
+                                        defaultValue={values.town} id="form1" class="form-control" required/>
+                            </div>
+                            <div class="form-outline">
+                                    <label class="form-label" for="form1">Estate</label>
+                                    <input type="number" name="estate" 
+                                        onChange={handleChange('estate')}
+                                        defaultValue={values.estate} id="form1" class="form-control" required/>
                             </div>
                             <div class="form-outline">
                                     <label class="form-label" for="form1">Postal</label>

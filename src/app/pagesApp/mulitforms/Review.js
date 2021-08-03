@@ -48,8 +48,8 @@ class Review extends Component{
 
         // let merchid = "800000000605"
         
-        const { values: {region, phone, accttype, postal, expiry,city,
-            country, address, merchid, name, account}} = this.props
+        const { values: { businessOwnerNames, businessName, county, town, estate, postal,
+            businessPhoneNumber}} = this.props
 
         return(
             <div className="pages">
@@ -65,17 +65,13 @@ class Review extends Component{
                                     </div>
 
                                     <ul class="list-group">
-                                    <li class="list-group-item">{ merchid }</li>
-                                        <li class="list-group-item">{name }</li>
-                                        <li class="list-group-item">{address}</li>
-                                        <li class="list-group-item">{city}</li>
-                                        <li class="list-group-item">{country}</li>
-                                        <li class="list-group-item">{region}</li>
-                                        <li class="list-group-item">{phone}</li>
+                                    <li class="list-group-item">{ businessOwnerNames }</li>
+                                        <li class="list-group-item">{businessName }</li>
+                                        <li class="list-group-item">{county}</li>
+                                        <li class="list-group-item">{town}</li>
+                                        <li class="list-group-item">{estate}</li>
                                         <li class="list-group-item">{postal}</li>
-                                        <li class="list-group-item">{account}</li>
-                                        <li class="list-group-item">{accttype}</li>
-                                        <li class="list-group-item">{expiry}</li>
+                                        <li class="list-group-item">{businessPhoneNumber}</li>
                                     </ul>
                                     </div>
                   
