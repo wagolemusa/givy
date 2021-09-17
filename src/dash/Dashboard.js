@@ -25,8 +25,7 @@ import Tche from './pages/Tche';
 function Dashboard(){
     return(
         <>
-       
-            <Router>
+         <Router>
             <Sidebar/>
             {/* <Side/> */}
                 <Switch>

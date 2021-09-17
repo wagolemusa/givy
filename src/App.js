@@ -16,17 +16,14 @@ function App(){
     <>
       <Router>
             <Switch>
-            <Route path='/give' component={Give} />
+                <Route path='/give' component={Give} />
                 <Route path='/' exact component={Homepage} />
                 <Route path='/app' component={Applink} />
                 <Route path='/dash' component={Dashboard}/>
                 <Route path='/dash/Form' component={Form} />
-                {/* <Route path='/dash/Contribution' exact component={Contribution}/> */}
-               
-            </Switch>
-           
+                {/* <Route path='/dash/Contribution' exact component={Contribution}/> */}  
+            </Switch>       
         </Router>
-   
     </>
     );
 }
