@@ -18,6 +18,7 @@ class Giver extends React.Component{
     componentDidMount =() =>{
         this.getAllPost();
     }
+
     getAllPost = async () =>{
         const { data} = await axios.get("https://givyv2.herokuapp.com/givers/api/giver",{
             headers: {
@@ -86,6 +87,7 @@ class Giver extends React.Component{
                                 <p>To add a transaction, first you’ll need to say who it belongs to. 
                                     You can start typing in the drop-down below to search and select the giver,
                                     or if you need to enter someone new, just hit the “Add New </p>
+                               
                                 <select class="select dbSzIv fsEGGn" onChange={event => this.givername = event.target.value}>
                                     Select Giver Name
                                 {this.state.posts.map((post, index)=>(
