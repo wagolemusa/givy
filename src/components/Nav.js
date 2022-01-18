@@ -1,67 +1,73 @@
 import React from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom';
-function Nav(){
-    return(
-        <>
-        <nav class="navbar navbar-expand-lg navStyle">
-     <a class="brand-navbar" href="#"> 
-            </a> 
-            <Link to='/' className='navbar-logo'>
-            Givy
-            <i class='fab fa-typo3' />
+function Nav() {
+  return (
+    <>
+      <nav class="navbar navbar-expand-sm fixed-top  green darken-1">
+        <a class="navbar-brand" href="#">
+          <Link to='/' className='navbar-logo'>
+            Givy  <i class='fab fa-typo3' />
           </Link>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
-                <span><i class="fas fa-align-right iconStyle"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainMenu">
-                <ul class="navbar-nav ml-auto navList">
-                    <li class="nav-item">
-                    <Link to='/' className='nav-link'>
-                        Overview
-                    </Link>
-                    </li>
-                    <li class="nav-item">
-                    <Link
-                        to='/features'
-                        className='nav-link'>
-                    Features
-                    </Link>
-                    </li>
+        </a>
 
-                    <li class="nav-item">
-                    <Link
-                        to='/pricing'
-                        className='nav-link'>
-                        Pricing
-                    </Link>
-                    </li>
-                    <li class="nav-item">
-                    <Link
-                        to='/Contanct'
-                        className='nav-link'>
-                    Contact Us
-                    </Link>
-                    </li>
-                    <li class="nav-item">
-                    <Link
-                        to='/login'
-                        className='nav-link'>
-                            <button class="btn btn-round nav-button px-3 mr-2" type="button">Login</button>
-                       
-                    </Link>
-                    </li>
-                    <li class="nav-item">
-                    <Link
-                to='/Siginup'>
-                <button class="btn btn-tangerine btn-round nav-button px-3" type="button">Start For Free</button>
-              </Link>
-                    </li>
-                </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <ul class="navbar-nav mr-auto">
+          <Link 
+              to='/About'
+              className='nav-link'>
+                About us
+            </Link>
+          <Link 
+              to='/Events'
+              className='nav-link'>
+              Events
+            </Link>
+
+            <Link 
+              to='/Blogs'
+              className='nav-link'>
+              Blogs
+            </Link>
+            <Link 
+              to='/Campaigns'
+              className='nav-link'>
+              Campaigns
+            </Link>
+            <Link 
+              to='/Contanct'
+              className='nav-link'>
+              Contact Us
+            </Link>
+          </ul>
+
+          <form class="form-inline">
+          <Link 
+              to='/login'
+              className='nav-link'>
+              Login
+            </Link>
+
+            <div className='donate'>
+            <Link
+              to='/donate' 
+              className='nav-link'>
+              Donate
+            </Link>
             </div>
-        </nav>
+          </form>
+        </div>
+      </nav>
 
-        </>
-    )
-} 
+    </>
+  )
+}
 export default Nav
+
+

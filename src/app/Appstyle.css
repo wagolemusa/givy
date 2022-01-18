@@ -519,8 +519,9 @@ nav ul li:hover{
 }
 	
 nav ul li {
-	background: #161a42;
+	/* background: #161a42;? */
 	padding: -12px;
+  color: #0000;
 }
 
 nav a {
@@ -579,7 +580,7 @@ nav ul ul ul li {
   color: #ffffff;
 }
 
-.navbar-toggler-icon{
+/* .navbar-toggler-icon{
   font-size: 30px;
   color: yellow;
   float: right;
@@ -587,7 +588,7 @@ nav ul ul ul li {
   margin-right: 40px;
   cursor: pointer;
   display: none
-}
+} */
 
 .container2 {
   width: 100%;
@@ -1575,15 +1576,15 @@ dl.row > dd + dt {
 
 
 
-.navbar-nav .nav-link + .nav-link {
+/* .navbar-nav .nav-link + .nav-link {
   margin-right: 1rem;
 }
 
 .navbar-nav .nav-item + .nav-item {
   margin-right: 1rem;
-}
+} */
 
-@media (max-width: 543px) {
+/* @media (max-width: 543px) {
   .navbar-toggleable .navbar-nav .nav-item {
       margin-right: 0;
   }
@@ -1599,7 +1600,7 @@ dl.row > dd + dt {
   .navbar-toggleable-md .navbar-nav .nav-item {
       margin-right: 0;
   }
-}
+} */
 
 .card-link + .card-link {
   margin-right: 1.25rem;
@@ -2053,11 +2054,11 @@ background: none;
       padding-left: 17px;
   }
 }
-@media (max-width: 858px){
+/* @media (max-width: 858px){
   .navbar-toggler-icon{
     display: block;
   }
-}
+} */
 
 @media (max-width: 858px){
   .left1{
@@ -2203,3 +2204,5 @@ background: none;
     color: #30322f;
 }
 .checkout-promise-item i{padding-right: 10px;color: #43b02a;}
+
+

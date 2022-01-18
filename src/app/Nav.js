@@ -5,67 +5,43 @@ import { Link } from 'react-router-dom';
 function Nav (){
     return(
       <div>
-    <nav class="navbar fixed-top navbar-expand navbar-dark"> <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
-        <span class="navbar-toggler-icon"></span></a> 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> 
-        <span class="navbar-toggler-icon"></span> </button>
-            <div class="collapse navbar-collapse" id="navbarsExample02">
-            <div className="adm">
-                <h3>Admin</h3>
-            </div>
-                <ul class="navbar-nav">
-                   
-                    <div className="left1">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-plus"></i>&nbsp;&nbsp;Kisumchurch</a>
-        
-                <ul>
-                    
-                    <li class="nav-item"><a class="nav-link" href="#">My Giving</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
-                </ul>        
-                </li>
-                </div>
-            </ul>
-            </div>
-        </nav>
-        <div id="wrapper" class="toggled">
-            
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li>
-                        <Link to='/app/Actave'><i class="fas fa-money-check-alt">&nbsp;&nbsp;</i>Activate</Link>
-                    </li>
-                    <li>
-                    <Link to='/app/Giver'><i class="fas fa-hand-holding-usd">&nbsp;&nbsp;</i>Giver</Link>
-                    </li>
-                    <li>
-                    <Link to="/app/Recuring"><i class="fas fa-list"></i>&nbsp;&nbsp; Recuring</Link>
-                    </li>
-                    <li>
-                    <Link to="/app/Givingflow"><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Giving Flow</Link>
-                    </li>
-                    <li>
-                    <Link to="/app/Setting"><i class="fas fa-cog"></i>&nbsp;&nbsp;Setting</Link>
-                    </li>
-                    <li>
-                    <Link to="/app/Give"><i class="fas fa-cog"></i>&nbsp;&nbsp;Triger Url</Link>
-                    </li>
-                    <li>
-                    <Link to={'/'} onClick={() => localStorage.clear()}><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</Link>
-                    </li>
-                </ul>
-            </div> 
-           
-            {/* <div id="page-content-wrapper">
-                <div class="container2">
-                    <h1>Simple Sidebar</h1>
-                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                </div>
-            </div>  */}
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark amber darken-4">
+   <a class="navbar-brand" href="#">
+   <Link to='/' className='navbar-logo'>
+            Givy
+            <i class='fab fa-typo3' />
+           </Link>
+   </a>
+ 
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+ 
+   <div class="collapse navbar-collapse" id="basicExampleNav">
+ 
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item" style="color: #ffffff; font-weight: 500;">
+         <a class="nav-link" href="index.html">Home
+         </a>
+       </li>
+      
+       <li class="nav-item" style="color: #ffffff; font-weight: 500;">
+         <a class="nav-link" href="./UI/pages/pricing.html">Pricing</a>
+       </li>
+     </ul>
+ 
+     <form class="form-inline">
+      
+         <a class="nav-link" href="./UI/pages/login.html" style="color: #ffffff; font-weight: 500;">Login</a>
+         <a class="nav-link" href="./UI/pages/register.html" style="color: #ffffff; font-weight: 500;">Register</a>
+
+
+     </form> 
+   </div>
+ </nav>
         </div> 
-        </div>
+  
 
     )
 }

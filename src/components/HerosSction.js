@@ -1,28 +1,47 @@
 import React from 'react'
 // import { Button } from './Button';
 import './Navbar.css'
-import ff from './ff.png'
+import pi from './pi.png'
 import agency from './images/agency.png'
 import '../App.css'
 
 function HeroSection(){
     return(
         <>
-        <section class="homepage">
-            <div className='hero-container'>
-                <h1>The evolution of church and non-profit <br/>
-                management software</h1>
-                <p>What are you waiting for ?</p>
-                <div className='hero-btns'>
-                < a href='/Siginup' button type="button" class="btn btn-primary">
-                    GET STARTED
-                </a>
-                <a href='/Siginup' button type="button" class="btn btn-danger">
-                    Sign Up<i className='far fa-play-circle'/>
-                </a>
+             <div className='container-fluid'>
+                <div className='hero-container'>
+                    <div className='row'>
+                    
+                        <div className='col-md-6'>
+
+                            <h1>Increase giving <br/> <span>Grow your church</span></h1>
+                            <p>helps you increase giving and simplify the lives of your staff with software and tools built for churches.</p>
+                          
+                            <div className='hero-btns'>
+                                < a href='/Siginup' type="button" class="btn btn-success nav-button px-3">
+                                Pray With Us
+                                </a>
+
+                                <a href='/Siginup' button type="button" class="btn btn-danger">
+                                    Sign Up<i className='far fa-play-circle' />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className='col-md-6'>
+                            <div className='img-style'>
+                                <img src={pi} class="img-fluid" alt="..." />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+
+
+        {/* <section class="homepage">
+           
+    
+        </section> */}
 
         <section className='homesection'>
             <div className='container-fluid'>

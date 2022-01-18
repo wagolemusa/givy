@@ -1,15 +1,15 @@
 import React from 'react'
-import '../../App.css';
+// import '../../App.css';
 // import Navbar from '../Navbar.css';
 import HeroSection from '../HerosSction';
-;
 
-function Home(){
+
+function Home() {
     return (
         <>
-        
-            <HeroSection/>
-            
+
+            <HeroSection />
+
 
         </>
     )
