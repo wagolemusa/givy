@@ -33,7 +33,7 @@ function Nav() {
             <Link 
               to='/Blogs'
               className='nav-link'>
-              Blogs
+              Projects
             </Link>
             <Link 
               to='/Campaigns'
@@ -49,6 +49,11 @@ function Nav() {
 
           <form class="form-inline">
           <Link 
+              to='/pray'
+              className='nav-link'>
+              Join us
+            </Link>
+          <Link 
               to='/login'
               className='nav-link'>
               Login
@@ -58,7 +63,7 @@ function Nav() {
             <Link
               to='/donate' 
               className='nav-link'>
-              Donate
+              Give
             </Link>
             </div>
           </form>

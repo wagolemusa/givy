@@ -11,6 +11,9 @@ body{
   
 } */
 
+.btn {
+font-size: 1em;
+}
 .home,
 .services,
 .products,
@@ -52,6 +55,8 @@ body{
 
 
 .homesection{
+
+  background-color: #eef1f5;
   padding: 3rem;
 }
 
@@ -60,25 +65,54 @@ body{
   /* height: 80px; */
 
 }
+.created-by{
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 12px;
+  transition: all 0.2s ease-in-out 0s;
+}
+.created-by span {
+ font-size: 15px;
+ font-weight: bold;
+ color: #f04556;
+ padding-left: 60px;
+}
+.created-by h6{
+  font-size: 15px;
+  font-weight: bold;
 
-.homesection h2{
-  margin-top: 0;
+}
+.link-title{
+  margin-top: 10px;
   margin-bottom: 20px;
-  font-family: Mallory,sans-serif;
-  font-size: 56px;
-  line-height: 58px;
-  font-weight: 700;
-  letter-spacing: -2px;
+  /* font-family: Mallory,sans-serif; */
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
 }
 
+
+
 .homesection p{
-  font-size: 20px;
+  font-size: 18px;
   color: #20343b;
 }
 
 .homesection img{
-  height: 400px;
-  width: 500px;
+  height: 200px;
+  /* width: 300px; */
+
+}
+.homesection a {
+  color: #20343b;
+font-weight: 600;
+font-size: 22px;
+margin-top: 10px;
+margin-bottom: 10px;
 }
 
 .homesection i{
@@ -93,13 +127,28 @@ body{
   padding-bottom: 4em;
   padding-left: 1em;
   padding-right: 1em;
+  text-align: center;
+}
+.back-ground-cards{
+  margin: 0px 0px 22px;
+  min-width: 0px;
+  height: 526px;
+  /* background-color: var(--theme-ui-colors-testimonialCardSlack); */
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 20px 10px -5px;
+  padding: 24px;
+  display: flex;
+  background-color: #fafafa;
+
 }
 
 .giving-section h2{
   margin-top: 0;
   margin-bottom: 10px;
  font-family: Mallory,sans-serif;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 29px;
   font-weight: 600;
   letter-spacing: -1px;
@@ -128,10 +177,28 @@ body{
 }
 
 .giving-section h3{
-  font-size: 20px;
+  font-size: 16px;
 line-height: 34px;
 text-align: center;
 margin: 10px;
+}
+
+.pray{
+  font-size: 20px;
+  background-color: #e03a7c!important;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.giving-section a:hover{
+  color: #fff;
+}
+
+.btn-btn-danger{
+  
 }
 
 .more{
@@ -160,18 +227,28 @@ margin: 10px;
 
 
 .sgin-up{
- width: 100%;
-padding-right: 15px; 
-padding-left: 15px;
 margin-right: auto;
 margin-left: auto;
-
 position: relative;
 background-color: #fff;
 border-radius: 5px;
-max-width: 595px;
+max-width: 590px;
 margin-top: 45px;
 padding: 45px;
+text-shadow: none;
+-webkit-box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 31%);
+-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 31%);
+padding-top: 20px;
+}
+
+.logiup-top{
+  padding: 5rem;
+}
+.logiup-top a{
+  color: red;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .main{
@@ -274,6 +351,113 @@ padding-left: 20px;
   /* padding-left: 1100px; */
 
 }
+/* Camapin style */
+.campain {
+  padding: 3rem;
+}
+
+.campain h3{
+  font-family: Matter,sans-serif;
+  color: #181f36;
+  font-size: 28px;
+  font-weight: 600;
+}
+.campain h2 {
+  font-family: Matter,sans-serif;
+  color: #181f36;
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.campain p{
+  font-size: 16px;
+  color: #20343b;
+}
+.campain a {
+  color: red;
+  font-weight: 600;
+}
+
+.campain h1{
+  font-size: 60px;
+  padding-bottom: 15px;
+  line-height: 130%;
+  font-family: MuseoSans-700,sans-serif;
+  font-weight: 400;
+}
+
+.campain img{
+  width: 800px;
+  height: 400px;
+}
+.usernames {
+  padding-top: 20px;
+  background-color: #eef1f5;
+  padding-left: 20px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
+  overflow: scroll;
+  height: 510px;
+}
+.usernames p{
+  color: red;
+  font-weight: 600;
+  font-size: 18px;
+}
+.usernames h3{
+  font-size: 20px;
+  font-weight: 600;
+  color: #181f36;
+}
+.btn-btn-success{
+  background-color: #00e25b;
+  color: #ffffff;
+  border:#00e25b;
+  height: 38px;
+  font-weight: 600;
+}
+
+/* Show page start */
+
+.show-page {
+  padding: 3rem;
+}
+
+.show-page p{
+  font-size: 20px;
+  padding-top: 30px;
+}
+.show-page h2{
+  float: right;
+  font-size: 20px;
+  color: green;
+  font-weight: 600;
+}
+
+.show-page h1{
+ 
+ text-align: center;
+ padding-top: 0;
+ font-family: Matter,sans-serif;
+ color: #181f36;
+ font-size: 56px;
+ line-height: 58px;
+ font-weight: 700;  
+}
+.show-page img{
+  width: 900px;
+  height: 600px;
+  
+}
+[class*='fix-'] {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none;
+}
+
+.fix-10-12 {
+  max-width: 922px !important;
+}
 @media screen and (max-width: 768px){
 
   .contact h2{
@@ -291,12 +475,6 @@ padding-left: 20px;
   font-weight: 500;
   
 }
-
-}
-
-
-
-.nav-link a{
 
 }
 .donate {
@@ -357,4 +535,66 @@ padding-left: 20px;
 .nav-link {
   display: block;
   padding: 1rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .homesection{
+    background-color: #eef1f5;
+    padding: 0.1rem;
+  }
+  .created-by{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 12px;
+    transition: all 0.2s ease-in-out 0s;
+  }
+  .created-by span {
+  font-size: 12px;
+  /* font-weight: bold; */
+  color: #f04556;
+  padding-left: 30px;
+  }
+  .created-by h6{
+    font-size: 12px;
+    /* font-weight: bold; */
+
+  }
+  .homesection h2{
+    margin-top: 10px;
+    margin-bottom: 18px;
+
+  }
+  .homesection p{
+    font-size: 15px;
+  }
+
+  .homesection img{
+    height: 150px;
+    width: 280px;
+  }
+  .back-ground-cards{
+    min-width: 0px;
+    height: 426px;
+  }
+  .show-page {
+    padding: 1rem;
+  }
+  .show-page h1{
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400; 
+    font-weight: 600; 
+  }
+  .show-page p{
+    font-size: 16px;
+  }
+  .show-page img{
+    height: 500px;
+  }
 }

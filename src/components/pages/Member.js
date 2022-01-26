@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../../App.css';
 import axios from 'axios';
 import {  Redirect } from 'react-router-dom';
-class Forgetpassword extends Component{
+class Member extends Component{
 
     constructor(props){
         super(props);
@@ -63,10 +63,10 @@ class Forgetpassword extends Component{
                 { error}
             <div class="form-outline mb-4">
             <label class="form-label" for="form2Example1"></label>
-                <input type="email" onChange={event => this.email = event.target.value} id="form2Example1" class="form-control" placeholder="Email" />
+                <input type="text" onChange={event => this.email = event.target.value} id="form2Example1" class="form-control" placeholder="Member ID" />
                
             </div>
-            <button type="submit" class="btn btn-primary btn-block mb-4">Forget Password</button>
+            <button type="submit" class="btn btn-primary btn-block mb-4">Member Login</button>
             </form>
             </div>
         
@@ -77,4 +77,4 @@ class Forgetpassword extends Component{
     )
 }
 }
-export default Forgetpassword
+export default Member

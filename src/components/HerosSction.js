@@ -2,8 +2,14 @@ import React from 'react'
 // import { Button } from './Button';
 import './Navbar.css'
 import pi from './pi.png'
+import p1 from './images/p1.jpg'
+import p2 from './images/p2.jpeg'
+import p8 from './images/p8.jpg'
+import p4 from './images/p4.jpg'
 import agency from './images/agency.png'
 import '../App.css'
+import { Link } from 'react-router-dom';
+import Campain from './pages/Campain'
 
 function HeroSection(){
     return(
@@ -18,13 +24,13 @@ function HeroSection(){
                             <p>helps you increase giving and simplify the lives of your staff with software and tools built for churches.</p>
                           
                             <div className='hero-btns'>
-                                < a href='/Siginup' type="button" class="btn btn-success nav-button px-3">
+                            <Link to='/pray'  type="button" class="btn btn-success nav-button px-3">
                                 Pray With Us
-                                </a>
+                            </Link>
 
-                                <a href='/Siginup' button type="button" class="btn btn-danger">
+                            <Link to='/login' button type="button" class="btn btn-danger">
                                     Sign Up<i className='far fa-play-circle' />
-                                </a>
+                            </Link>
                             </div>
                         </div>
 
@@ -45,90 +51,96 @@ function HeroSection(){
 
         <section className='homesection'>
             <div className='container-fluid'>
-
                 <div className='row'>
-                    <div className='col-md-6'>
-                        <h2>A giving platform
-                            built for churches like yours.
-                        </h2>
-                        <p>Our tools enable your church to give securely from anywhere, at any time</p>
-                        <div className='row'>
-                            <div className='col'>
-                                <button type="button" class="btn btn-danger">
-                                    Sign-up
-                                </button>
-                            </div>
-                            <div className='row'>
-                                <div className='col-md-2'>
-                                <i class="fas fa-church"></i>
-                                </div>
-                                &nbsp;&nbsp;
-                                <div className='col-md-8'>
-                                690 churches joined in the last 30 days.
-                                </div>
+
+                    <div className='col-md-3'>
+                        <div className='back-ground-cards'>
+                            <img src={p1} alt='itcon' />
+
+                                <Link to="/Show">Power Words that Evoke a Love of Money</Link>
+                        
+                            <p>Grateful for the Kernel community. I've learned a lot over the past 8
+                                weeks and look forward to watching... 
+                            
+                                <Link to="/Show" style={{fontSize: '16px', paddingLeft: '30px', color: 'green'}}>Read More</Link> 👋
+                                
+                            </p><br/>
+                            
+                            <div className='created-by'>
+                            <button type="button" class="btn btn-danger">Donate</button>
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div className='col-md-6'>
-                        <img src={agency} class="img-fluid" alt="..." />  
+                    <div className='col-md-3'>
+                        <div className='back-ground-cards'>
+                            <img src={p2} alt='itcon' />
+                            <Link to="/Show">Then he said to the disciple:</Link>
+                            <p>Jesus and Mary are together again, at the beginning 
+                                of his ministry in Cana and now at the end of his public 
+                                <Link to="/Show" style={{fontSize: '16px', paddingLeft: '30px', color: 'green'}}>Read More</Link> 👋
+                            </p><br/>
+                            
+                            <div className='created-by'>
+                            <button type="button" class="btn btn-danger">Donate</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-md-3'>
+                        <div className='back-ground-cards'>
+                            <img src={p8} alt='itcon' />
+                            <Link to="/Show">Power Words that Evoke a Love of Money</Link>
+                            <p>Grateful for the Kernel community. I've learned a lot over the past 8
+                                weeks and look forward to watching...  
+                                <Link to="/Show" style={{fontSize: '16px', paddingLeft: '30px', color: 'green'}}>Read More</Link> 👋👋
+                            </p><br/>
+                            
+                            <div className='created-by'>
+                            <button type="button" class="btn btn-danger">Donate</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='col-md-3'>
+                        <div className='back-ground-cards'>
+                            <img src={p4} alt='itcon' />
+                            <Link to="/Show">My God, my God, why have you forsaken me</Link>
+                            <p>This was the only expression of Jesus in the Gospels of Matthew and Mark. 
+                                Both Gospels related that it was in the ninth hour, after 3 hours of darkness  
+                                <Link to="/Show" style={{fontSize: '16px', paddingLeft: '30px', color: 'green'}}>Read More</Link> 
+                            </p>
+                            
+                            <div className='created-by'>
+                            <button type="button" class="btn btn-danger">Donate</button>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <Campain/>
 
         <section className='giving-section'>
-            <div className='container-fluid'>
-            <h1>Introducing the Givy.I0 platform</h1>
-            <h3>All the tools you need to run your church.</h3>
-            <br/><br/><br/>
-                <div className='row'>
-                    <div className='col-md-3'>
-                        <i class="fas fa-cloud-moon"></i><br/><br/>
-                        <h2>Events</h2>
-                        <p>A management platform to manage both paid and unpaid events. 
-                            Best event management system on the market.
-                        </p>
-                        <div className='more'>
-                           <a href='#'>LEARN MORE &nbsp;&nbsp; <i class="fas fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div className='col-md-3'>
-                        <i class="fas fa-hand-holding-usd"></i><br/><br/>
-                        <h2>Giving Platform</h2>
-                        <p>An all-in-one advanced platform to take care of church giving 
-                            needs from Mobile, kiosk, offline text to give.
-                        </p>
-                        <div className='more'>
-                           <a href='#'>LEARN MORE &nbsp;&nbsp; <i class="fas fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div className='col-md-3'>
-                        <i class="fas fa-journal-whills"></i><br/><br/>
-                        <h2>Booking Keeping</h2>
-                        <p>With Givy, the need of carrying books has ended. 
-                            It's an all-in-one solution for managing groups and websites
-                        </p>
-                        <div className='more'>
-                           <a href='#'>LEARN MORE &nbsp;&nbsp; <i class="fas fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div className='col-md-3'>
-                    
-                        <i class="fas fa-cross"></i><br/><br/>
-                        <h2>CHMS</h2>
-                        <p>Church management has never been easy. 
-                            With our system, all works are in one place with our advanced system. 
-                        </p>
-                        <div className='more'>
-                           <a href='#'>LEARN MORE &nbsp;&nbsp; <i class="fas fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div className='container'>
+            <h1>Come and pray with Us</h1>
+            <h3>True prayer is a way of life, not just for use in cases of emergency.<br/>
+                 Make it a habit, and when the need arises you will be in practice." </h3>
+             <Link
+              to='/pray' 
+              className='nav-link' class="pray">
+              Join Our Prayers
+            </Link>
+
             </div>
-        </section>
-        
+        </section>   
     </>
+
     )
 }
 

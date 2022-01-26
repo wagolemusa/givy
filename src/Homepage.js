@@ -10,6 +10,9 @@ import Forgetpassword from './components/pages/Forgetpassword';
 import Contanct from './components/pages/Contanct';
 import Footer from './components/pages/Footer';
 import Success from './components/pages/Success'
+import Pray from './components/pages/Pray';
+import Member from './components/pages/Member';
+import Show from './components/pages/Show';
 
 function Homepage(){
     return (
@@ -24,6 +27,11 @@ function Homepage(){
                 <Route exact path='/Forgetpassword' component={Forgetpassword} />
                 <Route exact path='/Contanct' component={Contanct} />
                 <Route exact path='/Success' component={Success} />
+                <Route exact path='/Pray' component={Pray} />
+                <Route exact path='/Member' component={Member} />
+                <Route exact path='/Show' component={Show} />
+
+
             </Switch> 
             <Footer/>
         </Router>
